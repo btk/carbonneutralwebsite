@@ -15,7 +15,7 @@ export default function Home() {
       <div className={styles.hero}>
         <div className={styles.heroContent}>
           <Header/>
-          <h2>Offset Your Website's<br/>
+          <h2>Offset Your Website{`,`}s<br/>
           Carbon Footprint</h2>
           <p>Work In Progress</p>
         </div>
