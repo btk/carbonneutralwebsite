@@ -2,8 +2,22 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
+import post from '../js/post'
+import { useState, useEffect } from 'react'
 
 export default function Home() {
+  const [url, setUrl] = useState("");
+  const [calculating, setCalculating] = useState(false);
+  const [results, setResults] = useState({});
+
+  let calculate = async () => {
+    setCalculating(true);
+    let calculation = await post("/api/calculate", {url})
+    console.log(calculation.results);
+    setResults(calculation.results);
+    setCalculating(false);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,9 +29,11 @@ export default function Home() {
       <div className={styles.hero}>
         <div className={styles.heroContent}>
           <Header/>
-          <h2>Offset Your Website{`,`}s<br/>
+          <h2>Calculate Your Website{`'`}s<br/>
           Carbon Footprint</h2>
-          <p>Work In Progress</p>
+          <input type="text" onChange={(e) => setUrl(e.target.value)}/>
+          {!calculating && <div onClick={() => calculate()}>Calculate</div>}
+          {calculating && <div>Calculating...</div>}
         </div>
       </div>
       <div className="content">
