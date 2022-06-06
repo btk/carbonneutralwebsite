@@ -10,9 +10,11 @@ const handler = async (req, res) => {
     const options = {logLevel: 'info', output: 'html', onlyCategories: ['performance'], port: chrome.port};
     const runnerResult = await lighthouse(url, options);
 
-    console.log('Report is done for', runnerResult.lhr.finalUrl);
-    console.log('Performance score was', runnerResult.lhr.categories.performance.score * 100);
-    res.status(200).json({ results: runnerResult.lhr.categories })
+    res.status(200).json({
+      url: runnerResult.lhr.finalUrl,
+      score: runnerResult.lhr.categories.performance.score * 100,
+      results: runnerResult.lhr.categories
+    })
 
     await chrome.kill();
 
