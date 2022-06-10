@@ -1,4 +1,4 @@
-const lighthouse = require('lighthouse');
+const lighthouse = require('lighthouse-chromium');
 const chromeLauncher = require('chrome-launcher');
 
 const handler = async (req, res) => {
