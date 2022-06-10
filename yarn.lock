@@ -507,12 +507,12 @@ chownr@^1.1.1:
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.1.4.tgz#6fc9d7b42d32a583596337666e7d08084da2cc6b"
   integrity sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==
 
-chrome-aws-lambda@~8.0.2:
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/chrome-aws-lambda/-/chrome-aws-lambda-8.0.2.tgz#46a062d2cc07d5cc047606558093bae371a5b709"
-  integrity sha512-a4VEX6DknxISPqGLksZa/JuEnjc4nLXaG0BMp5c9qERvJ/eBHPUJ7oCRQQC+SxSxuxsEwxbBj2RBlCQbivnihg==
+chrome-aws-lambda@~6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/chrome-aws-lambda/-/chrome-aws-lambda-6.0.0.tgz#e0966a5759e6b57c24584c2511fb72738b6209ff"
+  integrity sha512-XnFo6AaE5ZYpHYmOmMoj1yCYFeRTx6uFCpJnVuDREWzXevzZvo3gzkyQ6qSKsPW91VGWeQI7wQgnOpW50e+Dzg==
   dependencies:
-    lambdafs "^2.0.3"
+    lambdafs "^2.0.2"
 
 chrome-launcher@^0.13.3:
   version "0.13.4"
@@ -1801,7 +1801,7 @@ jsprim@^1.2.2:
     array-includes "^3.1.4"
     object.assign "^4.1.2"
 
-lambdafs@^2.0.3:
+lambdafs@^2.0.2:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/lambdafs/-/lambdafs-2.1.1.tgz#4bf8d3037b6c61bbb4a22ab05c73ee47964c25ed"
   integrity sha512-x5k8JcoJWkWLvCVBzrl4pzvkEHSgSBqFjg3Dpsc4AcTMq7oUMym4cL/gRTZ6VM4mUMY+M0dIbQ+V1c1tsqqanQ==
@@ -1844,9 +1844,9 @@ levn@^0.4.1:
 
 "lighthouse-chromium-aws-lambda@https://github.com/btk/lighthouse-chromium-aws-lambda.git":
   version "2.0.3"
-  resolved "https://github.com/btk/lighthouse-chromium-aws-lambda.git#d626f9ba017d7054b475fdc4094c2e2f3b22a24c"
+  resolved "https://github.com/btk/lighthouse-chromium-aws-lambda.git#4dfe8b28f45fc21d8b63ea10c402828cf46da7e0"
   dependencies:
-    chrome-aws-lambda "~8.0.2"
+    chrome-aws-lambda "~6.0.0"
     lighthouse "6.1.1"
 
 lighthouse-logger@^1.0.0, lighthouse-logger@^1.2.0:
