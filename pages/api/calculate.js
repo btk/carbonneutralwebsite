@@ -6,7 +6,7 @@ const handler = async (req, res) => {
 
   try {
 
-    const chrome = await chromeLauncher.launch({chromeFlags: ['--headless']});
+    const chrome = await chromeLauncher.launch({chromePath: lighthouse.CHROME_PATH, chromeFlags: ['--headless']});
     const options = {logLevel: 'info', output: 'html', onlyCategories: ['performance'], onlyAudits: ['network-requests'], port: chrome.port};
     const runnerResult = await lighthouse(url, options);
 
