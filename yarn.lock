@@ -1842,9 +1842,10 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-"lighthouse-chromium-aws-lambda@https://github.com/btk/lighthouse-chromium-aws-lambda.git":
-  version "2.0.3"
-  resolved "https://github.com/btk/lighthouse-chromium-aws-lambda.git#4dfe8b28f45fc21d8b63ea10c402828cf46da7e0"
+lighthouse-chromium-aws-lambda@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/lighthouse-chromium-aws-lambda/-/lighthouse-chromium-aws-lambda-2.0.4.tgz#c2170fb35cedfe57e5254c9dd16d1951b964cd78"
+  integrity sha512-FSW1Hi4hB8+wAaO9JWoXC56rCfq8MahdUfOYpoHGDDLcDE4qxBF/KqdAJA2e0CY7b08yPmdXr+Gc0c5iJuEyLA==
   dependencies:
     chrome-aws-lambda "~6.0.0"
     lighthouse "6.1.1"
@@ -2816,7 +2817,7 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-tar-fs@*:
+tar-fs@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/tar-fs/-/tar-fs-2.1.1.tgz#489a15ab85f1f0befabb370b7de4f9eb5cbe8784"
   integrity sha512-V0r2Y9scmbDRLCNex/+hYzvp/zyYjvFbHPNgVTKfQvVrb6guiE/fxP+XblDNR011utopbkex2nM4dHNV6GDsng==
