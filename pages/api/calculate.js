@@ -12,9 +12,7 @@ const handler = async (req, res) => {
 
     res.status(200).json({
       url: runnerResult.lhr.finalUrl,
-      score: runnerResult.lhr.categories.performance.score * 100,
-      results: runnerResult.lhr.categories,
-      audits: runnerResult.lhr.audits
+      score: runnerResult.lhr.categories.performance.score * 100
     })
 
     await chrome.kill();
