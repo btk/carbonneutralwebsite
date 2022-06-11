@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import post from '../js/post'
+import get from '../js/get'
 import { useState, useEffect } from 'react'
 
 const CARBON_PER_KB = 0.00082;
@@ -16,8 +17,13 @@ export default function Home() {
 
   let calculate = async () => {
     setCalculating(true);
-    let calculation = await post("/api/calculate", {url})
-    console.log(calculation);
+    const env = process.env.NODE_ENV
+    let calculation
+    if(env == "development"){
+      calculation = await get("/test.json")
+    }else{
+      calculation = await post("/api/calculate", {url})
+    }
 
     let pageSizeInKb = calculatePageSize(calculation.audits["network-requests"].details.items);
     console.log(pageSizeInKb);
