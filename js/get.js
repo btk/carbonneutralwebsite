@@ -7,12 +7,12 @@ let serialize = (obj) => {
   return str.join("&");
 }
 
-export default async function get(url = '', params = {}) {
+export default async function get(url = '', params = {}, mode) {
   let serialized = serialize(params);
   // Default options are marked with *
   const response = await fetch(url+"?"+serialized, {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
+    mode: mode ? mode : 'cors', // no-cors, *cors, same-origin
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
     credentials: 'same-origin', // include, *same-origin, omit
     headers: {

@@ -16,7 +16,7 @@ export default function Home() {
 
   let calculate = async () => {
     setCalculating(true);
-    let calculation = await post("/api/calculate", {url})
+    let calculation = await post("https://carbonneutralwebsite.org/api/calculate", {url}, "no-cors")
     console.log(calculation);
 
     let pageSizeInKb = calculatePageSize(calculation.audits["network-requests"].details.items);
