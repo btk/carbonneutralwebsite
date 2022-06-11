@@ -1,4 +1,4 @@
-const lighthouse = require('lighthouse-chromium-aws-lambda');
+const lighthouse = require('lighthouse-lambda')
 
 const handler = async (req, res) => {
   let { url } = req.body
