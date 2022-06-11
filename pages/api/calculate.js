@@ -1,4 +1,4 @@
-const lighthouse = require('lighthouse-lambda')
+const lighthouse = require('lighthouse-lambda-node12')
 
 const handler = async (req, res) => {
   let { url } = req.body
