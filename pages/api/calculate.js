@@ -10,8 +10,6 @@ const handler = async (req, res) => {
     const options = {logLevel: 'info', output: 'html', onlyCategories: ['performance'], onlyAudits: ['network-requests'], port: chrome.port};
     const runnerResult = await lighthouse(url, options);
 
-    console.log(runnerResult);
-
     res.status(200).json({
       url: runnerResult.lhr.finalUrl,
       score: runnerResult.lhr.categories.performance.score * 100,
