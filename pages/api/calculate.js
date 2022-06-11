@@ -1,13 +1,11 @@
 const lighthouse = require('lighthouse-chromium-aws-lambda');
-const chromeLauncher = require('chrome-launcher');
 
 const handler = async (req, res) => {
   let { url } = req.body
 
   try {
 
-    const chrome = await chromeLauncher.launch({chromePath: lighthouse.CHROME_PATH, chromeFlags: ['--headless']});
-    const options = {logLevel: 'info', output: 'html', onlyCategories: ['performance'], onlyAudits: ['network-requests'], port: chrome.port};
+    const options = {logLevel: 'info', output: 'html', onlyCategories: ['performance'], onlyAudits: ['network-requests']};
     const runnerResult = await lighthouse(url, options);
 
     res.status(200).json({
