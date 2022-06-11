@@ -16,7 +16,7 @@ export default function Home() {
 
   let calculate = async () => {
     setCalculating(true);
-    let calculation = await post("/api/calculateLocal", {url})
+    let calculation = await post("/api/calculate", {url})
     console.log(calculation);
 
     let pageSizeInKb = calculatePageSize(calculation.audits["network-requests"].details.items);
