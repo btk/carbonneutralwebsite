@@ -9,10 +9,7 @@ const handler = async (req, res) => {
     const runnerResult = await lighthouse(url, options);
 
     res.status(200).json({
-      url: runnerResult.lhr.finalUrl,
-      score: runnerResult.lhr.categories.performance.score * 100,
-      results: runnerResult.lhr.categories,
-      audits: runnerResult.lhr.audits
+      url: runnerResult
     })
 
     await chrome.kill();
