@@ -7,7 +7,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "chrome-aws-lambda": "^7.1.0",
+    "chrome-aws-lambda": "^7.0.0",
     "lighthouse": "^9.6.2",
     "next": "12.1.4",
     "react": "18.0.0",
