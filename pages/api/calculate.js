@@ -5,7 +5,7 @@ const handler = async (req, res) => {
 
   try {
     console.log("started parsing");
-    const options = {file: "", logLevel: 'info', output: 'html', onlyCategories: ['performance'], onlyAudits: ['network-requests']};
+    const options = {logLevel: 'info', output: 'html', onlyCategories: ['performance'], onlyAudits: ['network-requests']};
     const runnerResult = await lighthouse(url, options);
     console.log("runner came to a conclusion")
     res.status(200).json({
