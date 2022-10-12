@@ -1,11 +1,19 @@
 const lighthouse = require('lighthouse-lambda-node16')
-
+const flags = [
+  '--headless',
+  '--disable-dev-shm-usage',
+  '--disable-gpu',
+  '--no-zygote',
+  '--no-sandbox',
+  '--single-process',
+  '--hide-scrollbars'
+]
 const handler = async (req, res) => {
   let { url } = req.body
 
   try {
     console.log("started parsing");
-    const options = {logLevel: 'info', output: 'html', onlyCategories: ['performance'], onlyAudits: ['network-requests']};
+    const options = {logLevel: 'info', output: 'html', onlyCategories: ['performance'], onlyAudits: ['network-requests'], chromeFlags: flags};
     const runnerResult = await lighthouse(url, options);
     console.log("runner came to a conclusion")
     res.status(200).json({
