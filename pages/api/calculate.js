@@ -1,4 +1,5 @@
-const lighthouse = require('lighthouse-lambda-node16')
+//const lighthouse = require('lighthouse-lambda-node16')
+const lighthouse = require('serverless-lighthouse');
 const flags = [
   '--headless',
   '--disable-dev-shm-usage',
@@ -13,17 +14,15 @@ const handler = async (req, res) => {
 
   try {
     console.log("started parsing");
-    const options = {logLevel: 'info', output: 'html', onlyCategories: ['performance'], onlyAudits: ['network-requests'], chromeFlags: flags};
-    const runnerResult = await lighthouse(url, options);
+    /*const options = {logLevel: 'info', output: 'html', onlyCategories: ['performance'], onlyAudits: ['network-requests'], chromeFlags: flags};
+    const runnerResult = await lighthouse(url, options);*/
+    const results = await lighthouse.runLighthouse(url);
     console.log("runner came to a conclusion")
     res.status(200).json({
-      url: runnerResult.results.lhr.finalUrl,
-      score: runnerResult.results.lhr.categories.performance.score * 100,
-      results: runnerResult.results.lhr.categories,
-      audits: runnerResult.results.lhr.audits
+      url: results
     })
-
-    await chrome.kill();
+    console.log(results);
+    //await chrome.kill();
 
   } catch (e) {
     //res.status(500).json({ message: e.message })
