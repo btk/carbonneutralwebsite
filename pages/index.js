@@ -20,7 +20,7 @@ export default function Home() {
     const env = process.env.NODE_ENV
     let calculation
     if(env == "development"){
-      calculation = await get("/test.json")
+      calculation = await post("/api/calculate", {url})
     }else{
       calculation = await post("/api/calculate", {url})
     }

@@ -1,4 +1,4 @@
-const lighthouse = require('lighthouse-lambda-node12')
+const lighthouse = require('lighthouse-lambda-node16')
 
 const handler = async (req, res) => {
   let { url } = req.body
@@ -18,7 +18,7 @@ const handler = async (req, res) => {
     await chrome.kill();
 
   } catch (e) {
-    //res.status(500).json({ message: e.message })
+    res.status(500).json({ message: e.message })
   }
 }
 
