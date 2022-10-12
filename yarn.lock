@@ -1951,10 +1951,10 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-lighthouse-lambda-node16@^5.6.3:
-  version "5.6.3"
-  resolved "https://registry.yarnpkg.com/lighthouse-lambda-node16/-/lighthouse-lambda-node16-5.6.3.tgz#36208cdbd9d4048d5f70e8fa56e24ca9a9c36dea"
-  integrity sha512-jsz+O+GKqFiek+Uh+R4+/hpb1qN8q85PKmRLZLxBrB9g74OTKeDHNFaCaYposuJkBZF+C97o3l+mczRte08dRw==
+lighthouse-lambda-node16@^5.6.4:
+  version "5.6.4"
+  resolved "https://registry.yarnpkg.com/lighthouse-lambda-node16/-/lighthouse-lambda-node16-5.6.4.tgz#3ae293951e9e86674d2f217d0280d36844f289a3"
+  integrity sha512-vgMD25qoUhtm/xlo7+c/EXghU++Y6rAmOTbjysSw82LcKEBRSVbBZsW0Qu+5RozYo3JiiXP++XxOjl0BkC3zxw==
   dependencies:
     chrome-aws-lambda "^2.1.1"
     lighthouse "^6.1.1"
