@@ -14,9 +14,19 @@ const handler = async (req, res) => {
 
   try {
     console.log("started parsing");
-    /*const options = {logLevel: 'info', output: 'html', onlyCategories: ['performance'], onlyAudits: ['network-requests'], chromeFlags: flags};
-    const runnerResult = await lighthouse(url, options);*/
-    const results = await lighthouse.runLighthouse(url);
+    const options = {
+      extends: 'lighthouse:default',
+      settings: {
+        onlyCategories: ['performance'], onlyAudits: ['network-requests']
+      }
+    };
+
+    const chromeFlags = lighthouse.defaultChromeFlags;
+    const lighthouseFlags = lighthouse.defaultLighthouseFlags;
+    console.log("chromeFlags", chromeFlags);
+    console.log("lighthouseFlags", lighthouseFlags);
+    
+    const results = await lighthouse.runLighthouse("https://buraktokak.com", flags, lighthouseFlags)
     console.log("runner came to a conclusion")
     res.status(200).json({
       url: results
