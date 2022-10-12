@@ -3,7 +3,7 @@ const lighthouse = require('lighthouse-lambda-node16')
 const handler = async (req, res) => {
   let { url } = req.body
 
-  url = url || "https://buraktokak.com"
+  url = url || "http://x.com/"
 
   try {
     console.log("started parsing", url);
@@ -17,7 +17,7 @@ const handler = async (req, res) => {
       audits: runnerResult.results.lhr.audits
     })
 
-    await chrome.kill();
+    //await chrome.kill();
 
   } catch (e) {
     console.log(e);
