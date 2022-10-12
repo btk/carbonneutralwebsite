@@ -2796,6 +2796,15 @@ semver@^7.3.5:
   dependencies:
     lru-cache "^6.0.0"
 
+serverless-lighthouse-lk@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/serverless-lighthouse-lk/-/serverless-lighthouse-lk-1.0.2.tgz#50062d10fdda59b0c402d809f00ee9604afbce60"
+  integrity sha512-dyOFHpFGN15RUdKbm3uao+9qaW27aZ6NrAhTT95fSRnYTJsY8AozUUg6mAS/gziDYxxPewVzFLoAKGo3bKZPPw==
+  dependencies:
+    chrome-aws-lambda "^3.1.1"
+    chrome-launcher "^0.13.3"
+    lighthouse "^6.1.0"
+
 serverless-lighthouse@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/serverless-lighthouse/-/serverless-lighthouse-1.0.8.tgz#440d911f87b6d64f7d84476daaf939b05dab4262"

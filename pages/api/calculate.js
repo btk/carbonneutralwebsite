@@ -1,5 +1,5 @@
 //const lighthouse = require('lighthouse-lambda-node16')
-const lighthouse = require('serverless-lighthouse');
+const lighthouse = require('serverless-lighthouse-lk');
 const flags = [
   '--headless',
   '--disable-dev-shm-usage',
@@ -25,7 +25,7 @@ const handler = async (req, res) => {
     const lighthouseFlags = lighthouse.defaultLighthouseFlags;
     console.log("chromeFlags", chromeFlags);
     console.log("lighthouseFlags", lighthouseFlags);
-    
+
     const results = await lighthouse.runLighthouse("https://buraktokak.com", flags, lighthouseFlags)
     console.log("runner came to a conclusion")
     res.status(200).json({
