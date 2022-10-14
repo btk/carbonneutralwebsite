@@ -51,12 +51,9 @@ module.exports = async function createLighthouse(url, options = {}, config) {
   const { port } = new URL(browser.wsEndpoint());
 
   console.log("browser.port", port);
+  options.port = port;
 
-  const results = await lighthouse(url, {
-    port,
-    output: 'html',
-    logLevel: 'error',
-  }, config)
+  const results = await lighthouse(url, options, config)
 
   return {
     browser,
