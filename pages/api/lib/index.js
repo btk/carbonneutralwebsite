@@ -1,5 +1,5 @@
 const chromium = require('chrome-aws-lambda')
-const chromeLauncher = require('chrome-launcher')
+const puppeteer = require('puppeteer-core')
 const lighthouse = require('lighthouse')
 
 const defaultFlags = [
@@ -43,16 +43,24 @@ module.exports = async function createLighthouse(url, options = {}, config) {
   }
   console.log("chromePath", chromePath);
 
-  let chrome = await chromeLauncher.launch({
-    chromeFlags, chromePath
-  });
-  options.port = chrome.port
-  console.log("chrome.port", chrome.port);
-  const results = await lighthouse(url, options, config)
+  options.args = chromeFlags;
+  options.executablePath = chromePath;
+  options.headless = chromium.headless;
+
+  const browser = await puppeteer.launch(options);
+  const { port } = new URL(browser.wsEndpoint());
+
+  console.log("browser.port", port);
+
+  const results = await lighthouse(url, {
+    port,
+    output: 'html',
+    logLevel: 'error',
+  }, config)
+
   return {
-    chrome,
+    browser,
     log,
     results
-
   }
 }
