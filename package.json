@@ -11,10 +11,10 @@
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "chrome-aws-lambda": "^8.0.2",
+    "chrome-aws-lambda": "^7.0.0",
     "chrome-launcher": "^0.15.1",
     "lighthouse": "^6.1.1",
-    "puppeteer-core": "^8.0.0"
+    "puppeteer-core": "^7.0.0"
   },
   "devDependencies": {
     "eslint": "8.12.0",
