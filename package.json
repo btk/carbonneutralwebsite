@@ -7,14 +7,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "global": "^4.4.0",
-    "next": "12.1.4",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
+    "@sparticuz/chromium": "^107.0.0",
     "chrome-aws-lambda": "^2.1.1",
     "chrome-launcher": "^0.15.1",
+    "global": "^4.4.0",
     "lighthouse": "^6.1.1",
-    "puppeteer-core": "^2.1.1"
+    "next": "12.1.4",
+    "puppeteer-core": "^2.1.1",
+    "react": "18.0.0",
+    "react-dom": "18.0.0"
   },
   "devDependencies": {
     "eslint": "8.12.0",

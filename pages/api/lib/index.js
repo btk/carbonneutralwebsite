@@ -1,4 +1,4 @@
-const chromium = require('chrome-aws-lambda')
+const chromium = require('@sparticuz/chromium')
 const puppeteer = require('puppeteer-core')
 const lighthouse = require('lighthouse')
 
@@ -56,7 +56,6 @@ module.exports = async function createLighthouse(url, options = {}, config) {
   const results = await lighthouse(url, options, config)
 
   return {
-    browser,
     log,
     results
   }
