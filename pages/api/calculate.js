@@ -1,9 +1,9 @@
-const lighthouse = require('lighthouse-lambda-node16')
+const lighthouse = require('./lib/index.js')
 
 const handler = async (req, res) => {
   let { url } = req.body
 
-  url = url || "http://x.com/"
+  url = url || "http://buraktokak.com/"
 
   try {
     console.log("started parsing", url);
