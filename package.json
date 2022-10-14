@@ -7,7 +7,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@sparticuz/chromium": "^107.0.0",
     "chrome-aws-lambda": "^2.1.1",
     "chrome-launcher": "^0.15.1",
     "global": "^4.4.0",
