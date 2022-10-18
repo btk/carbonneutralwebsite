@@ -6,10 +6,15 @@ import post from '../js/post'
 import get from '../js/get'
 import { useState, useEffect } from 'react'
 
-const CARBON_PER_KB = 0.00082;
+const CARBON_PER_KB = 0.000845703125; // g
+const TREE_EMISSON_PER_YEAR = 24000.00;// g
+const CARBON_PER_PAGE_LOAD_ON_DEVICE = 0.002183706; // g
+const OVERALL_LIGHTHOUSE_SCORE_EFFECT = 20; // out of 100
 
 export default function Home() {
   const [url, setUrl] = useState("");
+  const [pageView, setPageView] = useState(10000);
+  const [ratio, setRatio] = useState(40);
   const [calculating, setCalculating] = useState(false);
   const [results, setResults] = useState({});
   const [pageSize, setPageSize] = useState({});
@@ -19,8 +24,8 @@ export default function Home() {
     setCalculating(true);
     const env = process.env.NODE_ENV
     let calculation
-    if(env == "development"){
-      calculation = await post("/api/calculate", {url})
+    if(env == "development" && url == ""){
+      calculation = await get("/test.json");
     }else{
       calculation = await post("/api/calculate", {url})
     }
@@ -52,7 +57,7 @@ export default function Home() {
   }
 
   let calculateCarbonFootPrint = (pageSizeInKb, performanceScore) => {
-    let performancePunishment = 1 + (1-performanceScore/100);
+    let performancePunishment = 1 + (1-performanceScore/100) / OVERALL_LIGHTHOUSE_SCORE_EFFECT;
     console.log("performancePunishment", performancePunishment);
     let firstVisitImpactKb = pageSizeInKb.firstVisit * performancePunishment;
     let returningVisitImpactKb = pageSizeInKb.returningVisit * performancePunishment;
@@ -60,11 +65,14 @@ export default function Home() {
 
     let firstVisitCarbon = firstVisitImpactKb * CARBON_PER_KB;
     let returningVisitCarbon = returningVisitImpactKb * CARBON_PER_KB;
+    let totalImpactInCarbon = firstVisitCarbon * pageView * ratio + returningVisitCarbon * pageView * (100 - ratio);
 
     return {
-      sizeInKb: {firstVisit: pageSizeInKb.returningVisit, returningVisit: pageSizeInKb.returningVisit},
+      sizeInKb: {firstVisit: pageSizeInKb.firstVisit, returningVisit: pageSizeInKb.returningVisit},
       impactInKb: {firstVisit: firstVisitImpactKb, returningVisit: returningVisitImpactKb},
       impactInCarbon: {firstVisit: firstVisitCarbon, returningVisit: returningVisitCarbon},
+      totalImpactInCarbon: totalImpactInCarbon,
+      treeToOffset: totalImpactInCarbon / TREE_EMISSON_PER_YEAR + pageView * CARBON_PER_PAGE_LOAD_ON_DEVICE / TREE_EMISSON_PER_YEAR,
     };
   }
 
@@ -78,10 +86,11 @@ export default function Home() {
 
       <div className={styles.hero}>
         <div className={styles.heroContent}>
-          <Header/>
           <h2>Calculate Your Website{`'`}s<br/>
           Carbon Footprint</h2>
-          <input type="text" onChange={(e) => setUrl(e.target.value)}/>
+          <p>URL: <input type="text" onChange={(e) => setUrl(e.target.value)}/></p>
+          <p>Yearly Pageview: <input type="number" value={pageView} onChange={(e) => setPageView(e.target.value)}/></p>
+          <p>New PageView Ratio: <input type="range" value={ratio} min="1" max="100" onChange={(e) => setRatio(e.target.value)}/> {ratio}%<  /p>
           {!calculating && <div onClick={() => calculate()}>Calculate</div>}
           {calculating && <div>Calculating...</div>}
           {footPrint.impactInCarbon &&
@@ -98,6 +107,10 @@ export default function Home() {
 
               <p>FirstVisit Carbon Footprint: {footPrint.impactInCarbon.firstVisit} g</p>
               <p>ReturningVisit Carbon Footprint: {footPrint.impactInCarbon.returningVisit} g</p>
+              <p></p>
+
+              <p>Total Impact in Carbon: {footPrint.totalImpactInCarbon / 1000} kg/yr</p>
+              <p>Tree to offset: {Math.ceil(footPrint.treeToOffset)} Trees</p>
             </div>
           }
         </div>
