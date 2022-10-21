@@ -19,9 +19,13 @@ export default function Home() {
   const [results, setResults] = useState({});
   const [pageSize, setPageSize] = useState({});
   const [footPrint, setFootPrint] = useState({});
+  const [hostData, setHostData] = useState(null);
 
   let calculate = async () => {
     setCalculating(true);
+    setHostData(null);
+    fetchHostData();
+
     const env = process.env.NODE_ENV
     let calculation
     if(env == "development" && url == ""){
@@ -39,6 +43,11 @@ export default function Home() {
     setFootPrint(calculatedFootPrint);
     console.log("footPrint", calculatedFootPrint);
     setCalculating(false);
+  }
+
+  let fetchHostData = async () => {
+    let fetchedHostData = await post("/api/location", {url});
+    setHostData(fetchedHostData);
   }
 
   let calculatePageSize = (items) => {
@@ -110,7 +119,14 @@ export default function Home() {
               <p></p>
 
               <p>Total Impact in Carbon: {footPrint.totalImpactInCarbon / 1000} kg/yr</p>
-              <p>Tree to offset: {Math.ceil(footPrint.treeToOffset)} Trees</p>
+              <p><big>Tree to offset: <b>{Math.ceil(footPrint.treeToOffset)} Trees</b></big></p>
+            </div>
+          }
+
+          {hostData != null &&
+            <div>
+              <p>{hostData.city} {hostData.country}, {hostData.countryCode}</p>
+              <p>ISP: {hostData.isp}</p>
             </div>
           }
         </div>
