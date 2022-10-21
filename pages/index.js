@@ -24,6 +24,8 @@ export default function Home() {
   let calculate = async () => {
     setCalculating(true);
     setHostData(null);
+    setResults({});
+    setFootPrint({});
     fetchHostData();
 
     const env = process.env.NODE_ENV
@@ -101,10 +103,10 @@ export default function Home() {
           <p>Yearly Pageview: <input type="number" value={pageView} onChange={(e) => setPageView(e.target.value)}/></p>
           <p>New PageView Ratio: <input type="range" value={ratio} min="1" max="100" onChange={(e) => setRatio(e.target.value)}/> {ratio}%<  /p>
           {!calculating && <div onClick={() => calculate()}>Calculate</div>}
-          {calculating && <div>Calculating...</div>}
+          {calculating && <div style={{color: "blue"}}>Calculating...</div>}
           {footPrint.impactInCarbon &&
             <div>
-              <p>Performance Score: {results.score} / 100</p>
+              <p>Performance Score: <b>{results.score} / 100</b></p>
               <p></p>
               <p>FirstVisit Load Kb: {footPrint.sizeInKb.firstVisit} kB</p>
               <p>ReturningVisit Load Kb: {footPrint.sizeInKb.returningVisit} kB</p>
