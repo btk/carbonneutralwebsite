@@ -7,7 +7,7 @@ import Logo from '../components/Logo'
 import post from '../js/post'
 import get from '../js/get'
 import { useState, useEffect } from 'react'
-import { Button, Text, Container, Card, Row, Spacer, Collapse, Navbar, Dropdown, Avatar } from '@nextui-org/react';
+import { Button, Text, Container, Card, Row, Spacer, Collapse, Navbar, Dropdown, Avatar, Input } from '@nextui-org/react';
 
 const CARBON_PER_KB = 0.000845703125; // g
 const TREE_EMISSON_PER_YEAR = 24000.00;// g
@@ -99,9 +99,10 @@ export default function Home() {
       </Head>
 
       <div className={styles.hero}>
-        <Navbar shouldHideOnScroll variant="sticky" css={{
-          $$navbarBackgroundColor: "transparent",
-          $$navbarBlurBackgroundColor: "#E9E8E150"
+        <Navbar  variant="sticky" css={{
+          $$navbarBackgroundColor: "#E9E8E1",
+          $$navbarBlurBackgroundColor: "#E9E8E150",
+          $$navbarShadow: "0 2px 8px 1px rgb(104 112 118 / 0.07), 0 1px 1px -1px rgb(104 112 118 / 0.04);"
         }}>
                 <Navbar.Toggle showIn="xs" />
                 <Navbar.Brand
@@ -125,28 +126,6 @@ export default function Home() {
                   </Navbar.Link>
                   <Navbar.Link href="#">Pricing</Navbar.Link>
                   <Navbar.Link href="#">Company</Navbar.Link>
-                </Navbar.Content>
-                <Navbar.Content
-                  css={{
-                    "@xs": {
-                      w: "12%",
-                      jc: "flex-end",
-                    },
-                  }}
-                >
-                  <Dropdown placement="bottom-right">
-                    <Navbar.Item>
-                      <Dropdown.Trigger>
-                        <Avatar
-                          bordered
-                          as="button"
-                          color="secondary"
-                          size="md"
-                          src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                        />
-                      </Dropdown.Trigger>
-                    </Navbar.Item>
-                  </Dropdown>
                 </Navbar.Content>
               </Navbar>
 
@@ -173,8 +152,10 @@ export default function Home() {
             Carbon Footprint
           </Text>
       </>
-          <p>URL: <input type="text" onChange={(e) => setUrl(e.target.value)}/></p>
-          <p>Yearly Pageview: <input type="number" value={pageView} onChange={(e) => setPageView(e.target.value)}/></p>
+          <Input labelLeft="https://" size="lg" label="Page URL" placeholder="www.site.com" type="text" onChange={(e) => setUrl(e.target.value)}/>
+          <Spacer y={0.6} />
+          <Input size="lg" label="Yearly Pageview" placeholder="10000" type="number" value={pageView} onChange={(e) => setPageView(e.target.value)}/>
+          <Spacer y={1.6} />
           <p>New PageView Ratio: <input type="range" value={ratio} min="1" max="100" onChange={(e) => setRatio(e.target.value)}/> {ratio}%<  /p>
           {!calculating && <Button size="lg" onClick={() => calculate()} color="gradient" auto>Calculate</Button>}
           {calculating && <div style={{color: "blue"}}>Calculating...</div>}
