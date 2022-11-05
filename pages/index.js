@@ -139,7 +139,7 @@ export default function Home() {
             }}
             weight="bold"
           >
-            Calculate Your Website's
+            Calculate Your Website&apos;s
           </Text>
           <Text
             h2
