@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import styles from "./style.module.css"
 
-function Logo({height}){
+function Logo({size}){
 
   return(
     <>
-      <Image className={styles.logo} height={height ? height : 133} src={require("../../public/logo.svg")} alt={`Logo`}/>
+      <Image className={styles.logo} height={size ? size : 133} width={size ? size : 133} src={require("../../public/logo.svg")} alt={`Logo`}/>
     </>
   );
 }
