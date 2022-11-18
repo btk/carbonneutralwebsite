@@ -7,16 +7,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^13.0.4",
     "@nextui-org/react": "^1.0.0-beta.10",
     "chrome-aws-lambda": "^6.0.0",
     "lighthouse": "^6.1.1",
-    "next": "12.1.4",
+    "next": "13.0.4",
     "puppeteer-core": "^6.0.0",
-    "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "eslint": "8.12.0",
-    "eslint-config-next": "12.1.4"
+    "eslint-config-next": "13.0.4"
   }
 }
