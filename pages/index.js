@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Carbon Neutral Website - Calculate Your Website's Carbon Footprint</title>
+        <title>Carbon Neutral Website - Calculate Your Website&apos;s Carbon Footprint</title>
         <meta name="description" content="Carbon Neutral Website is a carbon emission calculator that will take into account the power consumption of the devices used to access web pages and web servers, as well as the carbon footprint of the internet infrastructure." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
