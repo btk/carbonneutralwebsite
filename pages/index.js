@@ -107,20 +107,14 @@ export default function Home() {
         <>
           <Text
             h2
-            size={40}
-            css={{
-              textGradient: "45deg, $green600 -20%, $gray900 100%",
-            }}
+            size={31}
             weight="bold"
           >
             Calculate Your Website&apos;s
           </Text>
           <Text
             h2
-            size={40}
-            css={{
-              textGradient: "45deg, $gray900 -20%, $green600 100%",
-            }}
+            size={31}
             weight="bold"
           >
             Carbon Footprint
