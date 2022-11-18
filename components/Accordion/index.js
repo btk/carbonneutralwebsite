@@ -8,7 +8,7 @@ function Logo({size}){
     <Collapse.Group>
       <Collapse title="How does it work?">
         <Text>
-          The user inputs their domain name into the calculator and the web application will generate a report on the carbon emission of the website depending on the data transfer size and website efficiency. The report will include a set of recommendations on how to reduce the carbon footprint of the website.This calculator will also tell you the amount of trees you should plant to offset your website's carbon footprint.
+          The user inputs their domain name into the calculator and the web application will generate a report on the carbon emission of the website depending on the data transfer size and website efficiency. The report will include a set of recommendations on how to reduce the carbon footprint of the website.This calculator will also tell you the amount of trees you should plant to offset your website&apos;s carbon footprint.
         </Text>
       </Collapse>
       <Collapse title="Calculations">
@@ -23,7 +23,7 @@ function Logo({size}){
         </Text><Text style={{marginBottom: 10}}>
         Carbon emission per kb downloaded;
         </Text><Text style={{marginBottom: 10}}>
-        In a 2021 published <a href="https://observablehq.com/@mrchrisadams/carbon-footprint-of-sending-data-around" target="_blank">visual calculation notebook by Chris Adams</a> with energy consumption numbers taken from <a href="https://theshiftproject.org/en/lean-ict-2/" target="_blank">Shift Project's Lean ICT report</a> concludes that downloading 1 mb of data on average emits 0.866 g of CO2. Note that this number is only the transfer of data between servers, CDNs and user devices, and does not include the user device’s energy consumption to consume this data in terms of consuming content and scrolling through a website.
+        In a 2021 published <a href="https://observablehq.com/@mrchrisadams/carbon-footprint-of-sending-data-around" target="_blank">visual calculation notebook by Chris Adams</a> with energy consumption numbers taken from <a href="https://theshiftproject.org/en/lean-ict-2/" target="_blank">Shift Project&apos;s Lean ICT report</a> concludes that downloading 1 mb of data on average emits 0.866 g of CO2. Note that this number is only the transfer of data between servers, CDNs and user devices, and does not include the user device’s energy consumption to consume this data in terms of consuming content and scrolling through a website.
         </Text><Text style={{marginBottom: 10}}>
         Since our calculations will be in kb, we will accept the kB data transfer as <b>0.866/1024 = 0.000845703125 g CO2 per kb</b>.
         </Text><Text style={{marginBottom: 10}}>
