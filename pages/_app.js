@@ -1,4 +1,5 @@
 import { NextUIProvider, createTheme } from '@nextui-org/react';
+import '../styles/globals.css'
 
 import { DM_Sans } from '@next/font/google'
 

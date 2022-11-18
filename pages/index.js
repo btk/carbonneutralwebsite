@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Container sm>
+      <Container sm gap={0}>
         <Spacer y={1} />
         <Accordion />
       </Container>
