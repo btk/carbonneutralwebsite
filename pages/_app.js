@@ -10,10 +10,13 @@ const inter = DM_Sans({
 const theme = createTheme({
     type: 'light',
     theme: {
-        fonts: {
-            sans: inter.style.fontFamily,
-            serif: inter.style.fontFamily,
-        },
+      colors: {
+        gradient: 'linear-gradient(112deg, $green900 -25%, $green700 -20%, $green800 80%)'
+      },
+      fonts: {
+          sans: inter.style.fontFamily,
+          serif: inter.style.fontFamily,
+      },
     },
 })
 
