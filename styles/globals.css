@@ -89,15 +89,100 @@ a {
   top: 4px;
 }
 
+.calculatorHolder {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.calculatorSlider {
+
+}
+
+.calculatorSlider {
+  width: 100%;
+  position: relative;
+}
+
+.slideRatio {
+  position: absolute;
+  bottom: 17px;
+  left: 15px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  outline: none; /* Remove outline */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 1px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #6dbf36; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #6dbf36; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.calculatorURL {
+  width: 350px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .slider {
+      overflow: hidden;
+      -webkit-appearance: none;
+      background-color: #f1f3f5;
+      border-radius: 15px;
+      height: 44px;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      cursor: ew-resize;
+      box-shadow: -1000px 0 0 1000px #6dbf36;
+    }
+}
+
+
 @media only screen and (max-width: 700px) {
+
+  .calculatorURL {
+    width: auto;
+  }
+
+  .calculatorHolder {
+    flex-direction: column;
+  }
 
   .menuToggler {
     display: flex;
-    width: 55px;
-    height: 42px;
+    width: 50px;
+    height: 40px;
     background: #fff;
     position: absolute;
-    top: 37px;
+    top: 33px;
     right: 25px;
     border-radius: 10px;
     justify-content: center;

@@ -103,16 +103,39 @@ export default function Home() {
 
       <Header/>
       <Container sm>
-        <Spacer y={1} />
-        <Input labelLeft="https://" size="lg" label="Page URL" placeholder="www.site.com" type="text" onChange={(e) => setUrl(e.target.value)}/>
-        <Spacer y={0.6} />
-        <Input size="lg" label="Yearly Pageview" placeholder="10000" type="number" value={pageView} onChange={(e) => setPageView(e.target.value)}/>
-        <Spacer y={1.6} />
-        <p>New PageView Ratio: <input type="range" value={ratio} min="1" max="100" onChange={(e) => setRatio(e.target.value)}/> {ratio}%<  /p>
-        {!calculating && <Button size="lg" onClick={() => calculate()} color="gradient" auto>Calculate</Button>}
+        <div className="calculatorHolder">
+          <Input labelLeft="https://" size="lg" label="Page URL" placeholder="www.site.com" type="text" onChange={(e) => setUrl(e.target.value)} className="calculatorURL"/>
+          <div style={{width: 20, height: 20}}></div>
+          <Input size="lg" label="Yearly Pageviews" placeholder="10000" type="number" value={pageView} onChange={(e) => setPageView(e.target.value)} style={{minWidth: 140}}/>
+          <div style={{width: 20, height: 20}}></div>
+          <div className="calculatorSlider">
+            <label className="nextui-c-hzQjrs nextui-input-block-label" for="react-aria-222" id="react-aria-222" style={{marginTop: 5}}>New Pageview Ratio</label>
+            <input className="slider" type="range" value={ratio} min="1" max="100" onChange={(e) => setRatio(e.target.value)}/>
+            <div className="slideRatio">{ratio}%</div>
+          </div>
+          <div style={{width: 20}}></div>
+          <div>
+            <label className="nextui-c-hzQjrs nextui-input-block-label" for="react-aria-222" id="react-aria-222" style={{marginTop: 5}}>&nbsp;</label>
+            <Button size="lg" style={{height: 43, width: "100%"}} onClick={() => calculate()} color="gradient" auto>Calculate</Button>
+          </div>
+        </div>
         {calculating && <div style={{color: "blue"}}>Calculating...</div>}
+
+        {!footPrint.impactInCarbon &&
+          <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", padding: 10, paddingTop: 50}}>
+            <img src={"/girl.svg"} style={{width: 250, marginBottom: 20}}/>
+            <h3 style={{textAlign: "center"}}>Calculate and offset your web page carbon footprint</h3>
+          </div>
+        }
+
+
+
+
+
+
         {footPrint.impactInCarbon &&
           <div>
+            <h3>Results</h3>
             <p>Performance Score: <b>{results.score} / 100</b></p>
             <p></p>
             <p>FirstVisit Load Kb: {footPrint.sizeInKb.firstVisit} kB</p>

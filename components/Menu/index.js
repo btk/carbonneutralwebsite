@@ -18,8 +18,8 @@ const Menu = () => {
         </svg>
       </div>
       <div className={menu ? "menu mobileMenuActive" : "menu mobileMenuPassive"}>
-        <Link href={`/calculate/`}><Image src={"/icons/calculator.png"} width={30} height={30}/> Calculator</Link>
-        <Link href={`/forest/`}><Image src={"/icons/virtual-forest.png"} width={30} height={30}/> Virtual Forest</Link>
+        <Link href={`/calculate/`}><Image src={"/icons/calculator.png"} width={25} height={25}/> Calculator</Link>
+        <Link href={`/forest/`}><Image src={"/icons/virtual-forest.png"} width={27} height={27}/> Virtual Forest</Link>
         <Link href={`/plant/`} style={{marginRight: 0}}><Image src={"/icons/plant-trees.png"} width={30} height={30}/> Plant Trees <span className="soon">SOON</span></Link>
       </div>
     </>

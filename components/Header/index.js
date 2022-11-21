@@ -14,7 +14,7 @@ function Header(){
         <Container sm gap={0}>
 
           <div className="headerLinks">
-            <Link href="/"><Logo size={90} /></Link>
+            <Link href="/"><Logo size={80} /></Link>
             <Menu/>
           </div>
         </Container>
