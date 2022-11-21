@@ -9,6 +9,8 @@ import Accordion from '../components/Accordion'
 
 import post from '../js/post'
 import get from '../js/get'
+import displayValue from '../js/displayValue'
+
 import { useState, useEffect } from 'react'
 import { Button, Text, Container, Card, Row, Spacer, Collapse, Navbar, Dropdown, Avatar, Input } from '@nextui-org/react';
 
@@ -47,7 +49,6 @@ export default function Home() {
     }
 
     let pageSizeInKb = calculatePageSize(calculation.audits["network-requests"].details.items);
-    console.log(pageSizeInKb);
     setPageSize(pageSizeInKb);
     setResults(calculation);
 
@@ -101,10 +102,6 @@ export default function Home() {
     };
   }
 
-  if(results.audits){
-    console.log(results.audits["final-screenshot"].details.data);
-  }
-
   return (
     <div className={styles.container}>
       <Head>
@@ -152,29 +149,25 @@ export default function Home() {
         }
 
 
-
-
-
-
         {footPrint.impactInCarbon &&
           <div className="results">
             <div className="resultsLeft">
               <h3>Results</h3>
               <big>Performance Score: <b>{results.score} / 100</b></big>
               <p>&nbsp;</p>
-              <p>FirstVisit Load Kb: {footPrint.sizeInKb.firstVisit} kB</p>
-              <p>ReturningVisit Load Kb: {footPrint.sizeInKb.returningVisit} kB</p>
+              <p>FirstVisit Load Kb: {displayValue(footPrint.sizeInKb.firstVisit * 1000, "B")}</p>
+              <p>ReturningVisit Load Kb: {displayValue(footPrint.sizeInKb.returningVisit * 1000, "B")}</p>
               <p></p>
 
-              <p>FirstVisit Natural Impact Kb: {footPrint.impactInKb.firstVisit} kB</p>
-              <p>ReturningVisit Natural Impact Kb: {footPrint.impactInKb.returningVisit} kB</p>
+              <p>FirstVisit Natural Impact Kb: {displayValue(footPrint.impactInKb.firstVisit * 1000, "B")}</p>
+              <p>ReturningVisit Natural Impact Kb: {displayValue(footPrint.impactInKb.returningVisit * 1000, "B")}</p>
               <p></p>
 
-              <p>FirstVisit Carbon Footprint: {footPrint.impactInCarbon.firstVisit} g</p>
-              <p>ReturningVisit Carbon Footprint: {footPrint.impactInCarbon.returningVisit} g</p>
+              <p>FirstVisit Carbon Footprint: {displayValue(footPrint.impactInCarbon.firstVisit, "g")}</p>
+              <p>ReturningVisit Carbon Footprint: {displayValue(footPrint.impactInCarbon.returningVisit, "g")}</p>
               <p></p>
 
-              <p>Total Impact in Carbon: {footPrint.totalImpactInCarbon / 1000} kg/yr</p>
+              <p>Total Impact in Carbon: {displayValue(footPrint.totalImpactInCarbon, "g")}/yr</p>
               <p><big>Tree to offset: <b>{Math.ceil(footPrint.treeToOffset)} Trees</b></big></p>
 
 
