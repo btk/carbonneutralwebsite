@@ -39,7 +39,11 @@ export default function Home() {
     if(env == "development" && url == ""){
       calculation = await get("/test.json");
     }else{
-      calculation = await post("/api/calculate", {url})
+      let urlToCalculate = url;
+      if(!urlToCalculate.includes("http")){
+        urlToCalculate = "https://"+urlToCalculate;
+      }
+      calculation = await post("/api/calculate", {url: urlToCalculate})
     }
 
     let pageSizeInKb = calculatePageSize(calculation.audits["network-requests"].details.items);
@@ -93,6 +97,10 @@ export default function Home() {
     };
   }
 
+  if(results.audits){
+    console.log(results.audits["final-screenshot"].details.data);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -134,24 +142,31 @@ export default function Home() {
 
 
         {footPrint.impactInCarbon &&
-          <div>
-            <h3>Results</h3>
-            <p>Performance Score: <b>{results.score} / 100</b></p>
-            <p></p>
-            <p>FirstVisit Load Kb: {footPrint.sizeInKb.firstVisit} kB</p>
-            <p>ReturningVisit Load Kb: {footPrint.sizeInKb.returningVisit} kB</p>
-            <p></p>
+          <div className="results">
+            <div className="resultsLeft">
+              <h3>Results</h3>
+              <p>Performance Score: <b>{results.score} / 100</b></p>
+              <p></p>
+              <p>FirstVisit Load Kb: {footPrint.sizeInKb.firstVisit} kB</p>
+              <p>ReturningVisit Load Kb: {footPrint.sizeInKb.returningVisit} kB</p>
+              <p></p>
 
-            <p>FirstVisit Natural Impact Kb: {footPrint.impactInKb.firstVisit} kB</p>
-            <p>ReturningVisit Natural Impact Kb: {footPrint.impactInKb.returningVisit} kB</p>
-            <p></p>
+              <p>FirstVisit Natural Impact Kb: {footPrint.impactInKb.firstVisit} kB</p>
+              <p>ReturningVisit Natural Impact Kb: {footPrint.impactInKb.returningVisit} kB</p>
+              <p></p>
 
-            <p>FirstVisit Carbon Footprint: {footPrint.impactInCarbon.firstVisit} g</p>
-            <p>ReturningVisit Carbon Footprint: {footPrint.impactInCarbon.returningVisit} g</p>
-            <p></p>
+              <p>FirstVisit Carbon Footprint: {footPrint.impactInCarbon.firstVisit} g</p>
+              <p>ReturningVisit Carbon Footprint: {footPrint.impactInCarbon.returningVisit} g</p>
+              <p></p>
 
-            <p>Total Impact in Carbon: {footPrint.totalImpactInCarbon / 1000} kg/yr</p>
-            <p><big>Tree to offset: <b>{Math.ceil(footPrint.treeToOffset)} Trees</b></big></p>
+              <p>Total Impact in Carbon: {footPrint.totalImpactInCarbon / 1000} kg/yr</p>
+              <p><big>Tree to offset: <b>{Math.ceil(footPrint.treeToOffset)} Trees</b></big></p>
+            </div>
+            <div className="resultsRight">
+              {results.audits &&
+                <img src={results.audits["final-screenshot"].details.data} width={200}/>
+              }
+            </div>
           </div>
         }
 
