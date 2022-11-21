@@ -149,6 +149,8 @@ a {
   width: 350px;
 }
 
+
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .slider {
       overflow: hidden;
@@ -165,8 +167,24 @@ a {
     }
 }
 
+.results {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: space-between;
+}
+
+.resultsLeft {
+  flex: 2;
+}
+
 
 @media only screen and (max-width: 700px) {
+
+  .results {
+    flex-direction: column;
+  }
 
   .calculatorURL {
     width: auto;

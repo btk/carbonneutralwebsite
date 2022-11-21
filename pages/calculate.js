@@ -127,12 +127,20 @@ export default function Home() {
             <Button size="lg" style={{height: 43, width: "100%"}} onClick={() => calculate()} color="gradient" auto>Calculate</Button>
           </div>
         </div>
-        {calculating && <div style={{color: "blue"}}>Calculating...</div>}
 
         {!footPrint.impactInCarbon &&
           <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", padding: 10, paddingTop: 50}}>
             <img src={"/girl.svg"} style={{width: 250, marginBottom: 20}}/>
-            <h3 style={{textAlign: "center"}}>Calculate and offset your web page carbon footprint</h3>
+            {calculating &&
+              <div>
+              Calculating...
+              </div>
+            }
+            {!calculating &&
+              <div>
+              <h3 style={{textAlign: "center"}}>Calculate and offset your web page carbon footprint</h3>
+              </div>
+            }
           </div>
         }
 
@@ -145,8 +153,8 @@ export default function Home() {
           <div className="results">
             <div className="resultsLeft">
               <h3>Results</h3>
-              <p>Performance Score: <b>{results.score} / 100</b></p>
-              <p></p>
+              <big>Performance Score: <b>{results.score} / 100</b></big>
+              <p>&nbsp;</p>
               <p>FirstVisit Load Kb: {footPrint.sizeInKb.firstVisit} kB</p>
               <p>ReturningVisit Load Kb: {footPrint.sizeInKb.returningVisit} kB</p>
               <p></p>
@@ -161,19 +169,24 @@ export default function Home() {
 
               <p>Total Impact in Carbon: {footPrint.totalImpactInCarbon / 1000} kg/yr</p>
               <p><big>Tree to offset: <b>{Math.ceil(footPrint.treeToOffset)} Trees</b></big></p>
+
+
+              {hostData != null &&
+                <div>
+                  <p>{hostData.city} {hostData.country}, {hostData.countryCode}</p>
+                  <p>ISP: {hostData.isp}</p>
+                </div>
+              }
+
             </div>
             <div className="resultsRight">
               {results.audits &&
-                <img src={results.audits["final-screenshot"].details.data} width={200}/>
+                <div style={{position: "relative", top: 25}}>
+                  <img src={"/mobile.svg"} width={200} style={{position: "absolute", top: 80, transform: "scaleX(2.23) scaleY(2.15)"}} />
+                  <img src={results.audits["final-screenshot"].details.data} width={200}/>
+                </div>
               }
             </div>
-          </div>
-        }
-
-        {hostData != null &&
-          <div>
-            <p>{hostData.city} {hostData.country}, {hostData.countryCode}</p>
-            <p>ISP: {hostData.isp}</p>
           </div>
         }
       </Container>
