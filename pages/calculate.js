@@ -58,7 +58,11 @@ export default function Home() {
   }
 
   let fetchHostData = async () => {
-    let fetchedHostData = await post("/api/location", {url});
+    let urlToCalculate = url;
+    if(!urlToCalculate.includes("http")){
+      urlToCalculate = "https://"+urlToCalculate;
+    }
+    let fetchedHostData = await post("/api/location", {url: urlToCalculate});
     setHostData(fetchedHostData);
   }
 
