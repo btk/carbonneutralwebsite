@@ -173,7 +173,7 @@ export default function Home() {
               <p></p>
 
               <p>Total Impact in Carbon: {displayValue(footPrint.totalImpactInCarbon, "g")}/yr</p>
-              <p>Carbon Intensity Multiplier: <b>{displayValue(intensityFactorMultip, "")} times</b> more than avg ({hostData.country})</p>
+              <p>Carbon Intensity Multiplier: <b>x{displayValue(intensityFactorMultip, "")} times</b> more than United States ({hostData.country})</p>
               <p>Total Impact in Carbon with Intensity: {displayValue(footPrint.totalImpactInCarbon * intensityFactorMultip, "g")}/yr</p>
               <p><big>Trees to offset: <b>{Math.ceil(footPrint.treeToOffset)} Trees</b></big></p>
 
