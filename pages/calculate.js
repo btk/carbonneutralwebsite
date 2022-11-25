@@ -10,6 +10,7 @@ import Accordion from '../components/Accordion'
 import post from '../js/post'
 import get from '../js/get'
 import displayValue from '../js/displayValue'
+import intensityFactor from '../js/intensityFactor'
 
 import { useState, useEffect } from 'react'
 import { Button, Text, Container, Card, Row, Spacer, Collapse, Navbar, Dropdown, Avatar, Input } from '@nextui-org/react';
@@ -18,6 +19,7 @@ const CARBON_PER_KB = 0.0000845703125; // g
 const TREE_EMISSON_PER_YEAR = 24000.00;// g
 const CARBON_PER_PAGE_LOAD_ON_DEVICE = 0.002183706; // g
 const OVERALL_LIGHTHOUSE_SCORE_EFFECT = 20; // out of 100
+const AVG_CARBON_INTENSITY = 348; // gCO2/kWh
 
 export default function Home() {
   const [url, setUrl] = useState("");
@@ -28,6 +30,7 @@ export default function Home() {
   const [pageSize, setPageSize] = useState({});
   const [footPrint, setFootPrint] = useState({});
   const [hostData, setHostData] = useState(null);
+  const [intensityFactorMultip, setIntensityFactorMultip] = useState(1);
 
   let calculate = async () => {
     setCalculating(true);
@@ -65,6 +68,8 @@ export default function Home() {
     }
     let fetchedHostData = await post("/api/location", {url: urlToCalculate});
     setHostData(fetchedHostData);
+
+    setIntensityFactorMultip(intensityFactor(fetchedHostData.country, AVG_CARBON_INTENSITY));
   }
 
   let calculatePageSize = (items) => {
@@ -91,14 +96,14 @@ export default function Home() {
 
     let firstVisitCarbon = firstVisitImpactKb * CARBON_PER_KB;
     let returningVisitCarbon = returningVisitImpactKb * CARBON_PER_KB;
-    let totalImpactInCarbon = firstVisitCarbon * pageView * ratio + returningVisitCarbon * pageView * (100 - ratio);
+    let totalImpactInCarbon = firstVisitCarbon * pageView*12 * ratio + returningVisitCarbon * pageView*12 * (100 - ratio);
 
     return {
       sizeInKb: {firstVisit: pageSizeInKb.firstVisit, returningVisit: pageSizeInKb.returningVisit},
       impactInKb: {firstVisit: firstVisitImpactKb, returningVisit: returningVisitImpactKb},
       impactInCarbon: {firstVisit: firstVisitCarbon, returningVisit: returningVisitCarbon},
       totalImpactInCarbon: totalImpactInCarbon,
-      treeToOffset: totalImpactInCarbon / TREE_EMISSON_PER_YEAR + pageView * CARBON_PER_PAGE_LOAD_ON_DEVICE / TREE_EMISSON_PER_YEAR,
+      treeToOffset: totalImpactInCarbon / TREE_EMISSON_PER_YEAR + pageView*12 * CARBON_PER_PAGE_LOAD_ON_DEVICE / TREE_EMISSON_PER_YEAR,
     };
   }
 
@@ -115,7 +120,7 @@ export default function Home() {
         <div className="calculatorHolder">
           <Input labelLeft="https://" size="lg" label="Page URL" placeholder="www.site.com" type="text" onChange={(e) => setUrl(e.target.value)} className="calculatorURL"/>
           <div style={{width: 20, height: 20}}></div>
-          <Input size="lg" label="Yearly Pageviews" placeholder="10000" type="number" value={pageView} onChange={(e) => setPageView(e.target.value)} style={{minWidth: 140}}/>
+          <Input size="lg" label="Monthly Pageviews" placeholder="10000" type="number" value={pageView} onChange={(e) => setPageView(e.target.value)} style={{minWidth: 140}}/>
           <div style={{width: 20, height: 20}}></div>
           <div className="calculatorSlider">
             <label className="nextui-c-hzQjrs nextui-input-block-label" for="react-aria-222" id="react-aria-222" style={{marginTop: 5}}>New Pageview Ratio</label>
@@ -168,7 +173,9 @@ export default function Home() {
               <p></p>
 
               <p>Total Impact in Carbon: {displayValue(footPrint.totalImpactInCarbon, "g")}/yr</p>
-              <p><big>Tree to offset: <b>{Math.ceil(footPrint.treeToOffset)} Trees</b></big></p>
+              <p>Carbon Intensity Multiplier: <b>{displayValue(intensityFactorMultip, "")} times</b> more than avg ({hostData.country})</p>
+              <p>Total Impact in Carbon with Intensity: {displayValue(footPrint.totalImpactInCarbon * intensityFactorMultip, "g")}/yr</p>
+              <p><big>Trees to offset: <b>{Math.ceil(footPrint.treeToOffset)} Trees</b></big></p>
 
 
               {hostData != null &&

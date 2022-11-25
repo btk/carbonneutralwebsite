@@ -10,7 +10,7 @@ fs.readFile("./data/carbon-intensity-electricity.csv", 'utf8', (err, data) => {
       let countryObject = {};
       countryObject.name = country[0];
       countryObject.code = country[1];
-      countryObject.intensity = country[3];
+      countryObject.intensity = Number(country[3]);
       countryArray.push(countryObject);
     }
   })
