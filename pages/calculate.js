@@ -14,7 +14,7 @@ import displayValue from '../js/displayValue'
 import { useState, useEffect } from 'react'
 import { Button, Text, Container, Card, Row, Spacer, Collapse, Navbar, Dropdown, Avatar, Input } from '@nextui-org/react';
 
-const CARBON_PER_KB = 0.000845703125; // g
+const CARBON_PER_KB = 0.0000845703125; // g
 const TREE_EMISSON_PER_YEAR = 24000.00;// g
 const CARBON_PER_PAGE_LOAD_ON_DEVICE = 0.002183706; // g
 const OVERALL_LIGHTHOUSE_SCORE_EFFECT = 20; // out of 100
