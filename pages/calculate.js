@@ -19,7 +19,7 @@ const CARBON_PER_KB = 0.0000845703125; // g
 const TREE_EMISSON_PER_YEAR = 24000.00;// g
 const CARBON_PER_PAGE_LOAD_ON_DEVICE = 0.002183706; // g
 const OVERALL_LIGHTHOUSE_SCORE_EFFECT = 20; // out of 100
-const AVG_CARBON_INTENSITY = 348; // gCO2/kWh
+const US_AVG_CARBON_INTENSITY = 348; // gCO2/kWh
 
 export default function Home() {
   const [url, setUrl] = useState("");
@@ -69,7 +69,7 @@ export default function Home() {
     let fetchedHostData = await post("/api/location", {url: urlToCalculate});
     setHostData(fetchedHostData);
 
-    setIntensityFactorMultip(intensityFactor(fetchedHostData.country, AVG_CARBON_INTENSITY));
+    setIntensityFactorMultip(intensityFactor(fetchedHostData.country, US_AVG_CARBON_INTENSITY));
   }
 
   let calculatePageSize = (items) => {
