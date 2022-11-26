@@ -44,6 +44,11 @@ a {
   font-weight: bold;
   position: relative;
   top: 0px;
+  right: 10px;
+}
+
+.nextui-collapse-content {
+  padding-right: 25px;
 }
 
 .menuToggler {
@@ -176,7 +181,19 @@ a {
   cursor: not-allowed;
 }
 
+.recommendationsCarrier a {
+  font-weight: bold;
+  color: #108944;
+  border-bottom: 2px solid #108944;
+}
 
+.carbonImpactSection {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 20px;
+}
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .slider {

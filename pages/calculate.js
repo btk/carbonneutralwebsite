@@ -12,6 +12,7 @@ import get from '../js/get'
 import displayValue from '../js/displayValue'
 import intensityFactor from '../js/intensityFactor'
 import recommendations from '../public/recommendations'
+import ReactMarkdown from 'react-markdown'
 
 import { useState, useEffect } from 'react'
 import { Button, Text, Container, Card, Row, Spacer, Collapse, Navbar, Dropdown, Avatar, Input } from '@nextui-org/react';
@@ -207,7 +208,7 @@ export default function Home() {
               }
 
               {results &&
-                <div style={{marginTop: 30}}>
+                <div style={{marginTop: 30}} className="recommendationsCarrier">
                   <h3>Recommendations</h3>
                   <Collapse.Group style={{padding: 0, position: "relative", zIndex: 99}}>
                     {Object.values(results.audits).filter(a => a.score != null).filter(audit =>
@@ -222,8 +223,8 @@ export default function Home() {
                             {renderStatus(audit.score)}
                           </div>
                         } key={i}>
-                          <p>{audit.description}</p>
-                          <p><b>Carbon Impact:</b> {recommendations.filter(rec => rec.id == audit.id)[0].carbonImpact}</p>
+                          <ReactMarkdown linkTarget="_blank">{audit.score != 1 ? audit.description.replace("Learn more", "Take action").replace("Learn More", "Take action") : audit.description}</ReactMarkdown>
+                          <p className="carbonImpactSection"><b>Carbon Impact:</b> {recommendations.filter(rec => rec.id == audit.id)[0].carbonImpact}</p>
                         </Collapse>
                       )
                     })}
