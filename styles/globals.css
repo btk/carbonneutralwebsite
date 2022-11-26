@@ -32,6 +32,18 @@ a {
   font-weight: bold;
 }
 
+.indicator {
+  background: #108944;
+  border-radius: 4px;
+  bottom: 2px;
+  color: #fff;
+  font-size: 11px;
+  padding: 5px 6px 3px;
+  margin-left: 4px;
+  position: relative;
+  font-weight: bold;
+}
+
 .menuToggler {
   display: none;
 }

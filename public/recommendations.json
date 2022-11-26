@@ -1,0 +1,82 @@
+[
+  {
+    "id": "total-blocking-time",
+    "carbonImpact": "High Total Blocking Time means the client device CPU is extensively used during page load. Optimizing this value lowers the energy usage / CO2 emission of the client device."
+  },
+  {
+    "id": "mainthread-work-breakdown",
+    "carbonImpact": "Delivering smaller JavaScript payloads at the appropriate time will decrease the useless JavaScript parsing and decrease energy consumption / CO2 emission."
+  },
+  {
+    "id": "first-cpu-idle",
+    "carbonImpact": "Lowering the time and workload of the CPU will decrease energy consumption / CO2 emission for client devices."
+  },
+  {
+    "id": "uses-long-cache-ttl",
+    "carbonImpact": "Long caching policies for static files decreases returning pageview transfer sizes and lowers carbon emission of servers transfering files to client devices."
+  },
+  {
+    "id": "bootup-time",
+    "carbonImpact": "Delivering smaller JavaScript payloads at the appropriate time will decrease the useless JavaScript parsing and decrease energy consumption / CO2 emission."
+  },
+  {
+    "id": "legacy-javascript",
+    "carbonImpact": "Not delivering legacy code for modern browsers will cause carbon emission of servers transfering files to client devices."
+  },
+  {
+    "id": "largest-contentful-paint",
+    "carbonImpact": "High LCP might mean your web page is intensive in terms of images or styling. Decreasing this time metric lowers the energy usage / CO2 emission of client devices."
+  },
+  {
+    "id": "speed-index",
+    "carbonImpact": "Decreasing SI lowers the energy usage / CO2 emission of client devices."
+  },
+  {
+    "id": "cumulative-layout-shift",
+    "carbonImpact": "When the CLS metric is high, the graphics processor of the client device uses additional energy, optimizing this index can lower energy usage / CO2 emission."
+  },
+  {
+    "id": "server-response-time",
+    "carbonImpact": "High response time might mean either the server is far from the client and without a CDN service, or there are intensive backend tasks, optimizing this value will decrease carbon emission of servers transfering files to client devices."
+  },
+  {
+    "id": "offscreen-images",
+    "carbonImpact": "Lazy loading images helps lower data transfer and lowers carbon emission of servers transfering files to client devices. Additional not rendering offscreen images helps decrease energy consumption by client devices."
+  },
+  {
+    "id": "unminified-css",
+    "carbonImpact": "Minifying CSS lowers data transfer and lowers carbon emission of servers transfering files to client devices."
+  },
+  {
+    "id": "unminified-javascript",
+    "carbonImpact": "Minifying JavaScript lowers data transfer and lowers carbon emission of servers transfering files to client devices."
+  },
+  {
+    "id": "unused-css-rules",
+    "carbonImpact": "Tree-shaking unused CSS rules before deployment lowers data transfer and lowers carbon emission of servers transfering files to client device."
+  },
+  {
+    "id": "unused-javascript",
+    "carbonImpact": "Tree-shaking unused JavaScript rules before deployment lowers data transfer and lowers carbon emission of servers transfering files to client device."
+  },
+  {
+    "id": "uses-optimized-images",
+    "carbonImpact": "Optimizing images lowers data transfer and lowers carbon emission of servers transfering files to client devices."
+  },
+  {
+    "id": "uses-text-compression",
+    "carbonImpact": "Text compression lowers data transfer and lowers carbon emission of servers transfering files to client devices."
+  },
+  {
+    "id": "uses-responsive-images",
+    "carbonImpact": "Using responsive images can lower data transfer for different device screen resolutions."
+  },
+  {
+    "id": "dom-size",
+    "carbonImpact": "Lower DOM size means lower data transfer and lower energy used / CO2 emitted during page rendering on client devices."
+  },
+  {
+    "id": "no-document-write",
+    "carbonImpact": "Page load time is affected by this audit, optimizing this index can lower energy usage / CO2 emission."
+  }
+]

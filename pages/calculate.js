@@ -11,6 +11,7 @@ import post from '../js/post'
 import get from '../js/get'
 import displayValue from '../js/displayValue'
 import intensityFactor from '../js/intensityFactor'
+import recommendations from '../public/recommendations'
 
 import { useState, useEffect } from 'react'
 import { Button, Text, Container, Card, Row, Spacer, Collapse, Navbar, Dropdown, Avatar, Input } from '@nextui-org/react';
@@ -18,6 +19,7 @@ import { Button, Text, Container, Card, Row, Spacer, Collapse, Navbar, Dropdown,
 const CARBON_PER_KB = 0.0000845703125; // g
 const TREE_EMISSON_PER_YEAR = 24000.00;// g
 const CARBON_PER_PAGE_LOAD_ON_DEVICE = 0.002183706; // g
+const AVG_LCP_TIME = 2.5; // s
 const OVERALL_LIGHTHOUSE_SCORE_EFFECT = 20; // out of 100
 const US_AVG_CARBON_INTENSITY = 348; // gCO2/kWh
 
@@ -31,6 +33,8 @@ export default function Home() {
   const [footPrint, setFootPrint] = useState({});
   const [hostData, setHostData] = useState(null);
   const [intensityFactorMultip, setIntensityFactorMultip] = useState(1);
+  const [lcpMultip, setLcpMultip] = useState(1);
+  const [lcpTime, setLcpTime] = useState(AVG_LCP_TIME);
 
   let calculate = async () => {
     setCalculating(true);
@@ -54,6 +58,9 @@ export default function Home() {
     let pageSizeInKb = calculatePageSize(calculation.audits["network-requests"].details.items);
     setPageSize(pageSizeInKb);
     setResults(calculation);
+
+    setLcpMultip(calculation.audits["largest-contentful-paint"].score)
+    setLcpTime(calculation.audits["largest-contentful-paint"].displayValue);
 
     let calculatedFootPrint = calculateCarbonFootPrint(pageSizeInKb, calculation.score);
     setFootPrint(calculatedFootPrint);
@@ -97,14 +104,25 @@ export default function Home() {
     let firstVisitCarbon = firstVisitImpactKb * CARBON_PER_KB;
     let returningVisitCarbon = returningVisitImpactKb * CARBON_PER_KB;
     let totalImpactInCarbon = firstVisitCarbon * pageView*12 * ratio + returningVisitCarbon * pageView*12 * (100 - ratio);
+    let pageLoadImpactInCarbon = pageView*12 * lcpMultip * CARBON_PER_PAGE_LOAD_ON_DEVICE;
 
     return {
       sizeInKb: {firstVisit: pageSizeInKb.firstVisit, returningVisit: pageSizeInKb.returningVisit},
       impactInKb: {firstVisit: firstVisitImpactKb, returningVisit: returningVisitImpactKb},
       impactInCarbon: {firstVisit: firstVisitCarbon, returningVisit: returningVisitCarbon},
       totalImpactInCarbon: totalImpactInCarbon,
-      treeToOffset: totalImpactInCarbon / TREE_EMISSON_PER_YEAR + pageView*12 * CARBON_PER_PAGE_LOAD_ON_DEVICE / TREE_EMISSON_PER_YEAR,
+      treeToOffset: totalImpactInCarbon * intensityFactorMultip / TREE_EMISSON_PER_YEAR + pageLoadImpactInCarbon / TREE_EMISSON_PER_YEAR,
     };
+  }
+
+  let renderStatus = (score) => {
+    if(score == 1){
+      return <span className="indicator">Perfect</span>;
+    }else if(score > 0.5){
+      return <span className="indicator" style={{backgroundColor: "#9d8a04"}}>Needs Work</span>;
+    }else{
+      return <span className="indicator" style={{backgroundColor: "#a51c1c"}}>Poor</span>;
+    }
   }
 
   return (
@@ -175,6 +193,9 @@ export default function Home() {
               <p>Total Impact in Carbon: {displayValue(footPrint.totalImpactInCarbon, "g")}/yr</p>
               <p>Carbon Intensity Multiplier: <b>x{displayValue(intensityFactorMultip, "")} times</b> more than United States ({hostData.country})</p>
               <p>Total Impact in Carbon with Intensity: {displayValue(footPrint.totalImpactInCarbon * intensityFactorMultip, "g")}/yr</p>
+              <p>LCP TIME: {lcpTime}</p>
+
+
               <p><big>Trees to offset: <b>{Math.ceil(footPrint.treeToOffset)} Trees</b></big></p>
 
 
@@ -182,6 +203,31 @@ export default function Home() {
                 <div>
                   <p>{hostData.city} {hostData.country}, {hostData.countryCode}</p>
                   <p>ISP: {hostData.isp}</p>
+                </div>
+              }
+
+              {results &&
+                <div>
+                  <h3>Recommendations</h3>
+                  <Collapse.Group>
+                    {Object.values(results.audits).filter(a => a.score != null).filter(audit =>
+                      recommendations.filter(rec => rec.id == audit.id).length == 1
+                    ).sort(function(a, b) {
+                        return a.score - b.score;
+                    }).map((audit, i) => {
+                      return (
+                        <Collapse title={
+                          <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
+                            <h5>{audit.title}</h5>
+                            {renderStatus(audit.score)}
+                          </div>
+                        } key={i}>
+                          <p>{audit.description}</p>
+                          <p><b>Carbon Impact:</b> {recommendations.filter(rec => rec.id == audit.id)[0].carbonImpact}</p>
+                        </Collapse>
+                      )
+                    })}
+                  </Collapse.Group>
                 </div>
               }
 
