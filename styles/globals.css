@@ -42,6 +42,8 @@ a {
   margin-left: 4px;
   position: relative;
   font-weight: bold;
+  position: relative;
+  top: 0px;
 }
 
 .menuToggler {
@@ -204,6 +206,10 @@ a {
   flex: 2;
 }
 
+.resultsRight {
+  margin-left: 40px;
+}
+
 
 @media only screen and (max-width: 700px) {
 
@@ -269,4 +275,9 @@ a {
   .mobileMenuToggle {
     max-height: 300px;
   }
+
+  .resultsRight {
+    margin-left: 0px;
+  }
+
 }

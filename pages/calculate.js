@@ -207,9 +207,9 @@ export default function Home() {
               }
 
               {results &&
-                <div>
+                <div style={{marginTop: 30}}>
                   <h3>Recommendations</h3>
-                  <Collapse.Group>
+                  <Collapse.Group style={{padding: 0, position: "relative", zIndex: 99}}>
                     {Object.values(results.audits).filter(a => a.score != null).filter(audit =>
                       recommendations.filter(rec => rec.id == audit.id).length == 1
                     ).sort(function(a, b) {
@@ -232,9 +232,9 @@ export default function Home() {
               }
 
             </div>
-            <div className="resultsRight">
+            <div className="resultsRight" style={{paddingTop: 40}}>
               {results.audits &&
-                <div style={{position: "relative", top: 25}}>
+                <div style={{position: "sticky", top: 50}}>
                   <img src={"/mobile.svg"} width={200} style={{position: "absolute", top: 80, transform: "scaleX(2.23) scaleY(2.15)"}} />
                   <img src={results.audits["final-screenshot"].details.data} width={200}/>
                 </div>
