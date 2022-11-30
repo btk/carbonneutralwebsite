@@ -1,14 +1,16 @@
+# Carbon Neutral Website
 
-## Function Instances
+[Carbon Neutral Website](https://carbonneutralwebsite.org) is a carbon emission calculator that will take into account the power consumption of the devices used to access web pages and web servers, as well as the carbon footprint of the internet infrastructure. This calculator will also tell you the amount of trees you should plant to offset your website's carbon footprint.
 
-The instance in `/lighthouse` needs to be deployed on AWS Lambda, and then change the;
+## Function Instances
 
-`LIGHTHOUSE_LAMBDA_URI` environment variable to the public function instance URI.
+You need to deploy `/lighthouse` on AWS Lambda, and then change the `LIGHTHOUSE_LAMBDA_URI` environment variable to the public function instance URI.
 
+[See how in AWS docs](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-package.html)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Development
 
 First, run the development server:
 
@@ -22,7 +24,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Data References
+## Data References
 
 - [parsers/data/carbon-intensity.csv](https://ourworldindata.org/grapher/carbon-intensity-electricity) is supplied from ourworldindata.org, which is based on [bp statistical review of world energy 2022, 71st edition](https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2022-full-report.pdf)
 - [data/variables.json](/data/variables.json) contains static calculation variables used in the calculator tool
