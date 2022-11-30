@@ -36,3 +36,7 @@ AVG_LCP_TIME // s
 OVERALL_LIGHTHOUSE_SCORE_EFFECT // out of 100
 US_AVG_CARBON_INTENSITY // gCO2/kWh
 ```
+
+## Feedback
+
+This project is still in beta stage. You can give feedback and detail your problems by [creating a new issue](https://github.com/btk/carbonneutralwebsite/issues) in this Github repository.
