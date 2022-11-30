@@ -222,6 +222,11 @@ a {
   border-bottom: 5px solid #dbecdf;
 }
 
+.resultCol h4 {
+  font-size: 1em;
+  margin-bottom: 0px;
+}
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .slider {
       overflow: hidden;

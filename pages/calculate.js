@@ -68,7 +68,6 @@ export default function Home() {
 
     let calculatedFootPrint = calculateCarbonFootPrint(pageSizeInKb, calculation.score);
     setFootPrint(calculatedFootPrint);
-    console.log("footPrint", calculatedFootPrint);
     setCalculating(false);
   }
 
@@ -100,7 +99,6 @@ export default function Home() {
 
   let calculateCarbonFootPrint = (pageSizeInKb, performanceScore) => {
     let performancePunishment = 1 + (1-performanceScore/100) / OVERALL_LIGHTHOUSE_SCORE_EFFECT;
-    console.log("performancePunishment", performancePunishment);
     let firstVisitImpactKb = pageSizeInKb.firstVisit * performancePunishment;
     let returningVisitImpactKb = pageSizeInKb.returningVisit * performancePunishment;
 
@@ -145,13 +143,13 @@ export default function Home() {
           <Input size="lg" label="Monthly Pageviews" placeholder="10000" type="number" value={pageView} onChange={(e) => setPageView(e.target.value)} style={{minWidth: 140}}/>
           <div style={{width: 20, height: 20}}></div>
           <div className="calculatorSlider">
-            <label className="nextui-c-hzQjrs nextui-input-block-label" for="react-aria-222" id="react-aria-222" style={{marginTop: 5}}>New Pageview Ratio</label>
+            <label className="nextui-c-hzQjrs nextui-input-block-label" htmlFor="react-aria-222" id="react-aria-222" style={{marginTop: 5}}>New Pageview Ratio</label>
             <input className="slider" type="range" value={ratio} min="1" max="100" onChange={(e) => setRatio(e.target.value)}/>
             <div className="slideRatio">{ratio}%</div>
           </div>
           <div style={{width: 20}}></div>
           <div>
-            <label className="nextui-c-hzQjrs nextui-input-block-label" for="react-aria-222" id="react-aria-222" style={{marginTop: 5}}>&nbsp;</label>
+            <label className="nextui-c-hzQjrs nextui-input-block-label" htmlFor="react-aria-222" id="react-aria-222" style={{marginTop: 5}}>&nbsp;</label>
             <Button size="lg" style={{height: 43, width: "100%"}} onClick={() => calculate()} color="gradient" auto>Calculate</Button>
           </div>
           {calculating && <div className="calculatingCover"></div> }
@@ -179,7 +177,7 @@ export default function Home() {
         {footPrint.impactInCarbon &&
           <div className="results">
             <div className="resultsLeft">
-              <h3>Results</h3>
+              <h3 href="#results">Results</h3>
 
               <div style={{display: "flex", flexDirection: "row", width: "100%"}}>
                 <div className="resultCol">
@@ -199,7 +197,7 @@ export default function Home() {
                 {hostData != null &&
                   <div>
                     <h4>Server Location</h4>
-                    <p>{hostData.city} {hostData.country}, {hostData.countryCode} <b style={{textAlign: "right", width: "100%"}}>(x{displayValue(intensityFactorMultip, "")} more emission than US)</b></p>
+                    <p>{hostData.city} {hostData.country}, {hostData.countryCode} {hostData.countryCode != "US" && <b style={{textAlign: "right", width: "100%"}}>(x{displayValue(intensityFactorMultip, "")} more emission than US)</b>}</p>
                     <span>ISP: {hostData.isp}</span>
                   </div>
                 }
