@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: #333;
 }
 
 a {
@@ -19,4 +18,283 @@ a {
   max-width: 1000px;
   margin: auto;
   padding: 10px;
+}
+
+.soon {
+  background: #108944;
+  border-radius: 4px;
+  bottom: 2px;
+  color: #fff;
+  font-size: 10px;
+  padding: 5px 6px 3px;
+  margin-left: 4px;
+  position: relative;
+  font-weight: bold;
+}
+
+.indicator {
+  background: #108944;
+  border-radius: 4px;
+  bottom: 2px;
+  color: #fff;
+  font-size: 11px;
+  padding: 5px 6px 3px;
+  margin-left: 4px;
+  position: relative;
+  font-weight: bold;
+  position: relative;
+  top: 0px;
+  right: 10px;
+}
+
+.nextui-collapse-content {
+  padding-right: 25px;
+}
+
+.menuToggler {
+  display: none;
+}
+
+.headerLinks {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 17px;
+}
+
+.headerLinks .menu a {
+  text-decoration: none;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.headerLinks div:nth-child(1) a {
+}
+
+.headerLinks div:nth-child(2) a {
+  margin-left: 20px;
+}
+
+.headerSearchIcon {
+  position: relative;
+  top: 6px;
+  border-radius: 50%;
+  padding: 5px;
+  width: 27px;
+  height: 27px;
+  transition: 200ms all;
+  stroke: #1A1A1A;
+}
+
+.headerSearchIcon:hover {
+  background: #4799ca;
+  stroke: #fff;
+}
+
+.menu a {
+  font-weight: 700;
+  opacity: 1;
+  transition: 200ms all;
+}
+
+.menu a:hover {
+  opacity: 0.8;
+}
+
+.menu img {
+  position: relative;
+  top: 4px;
+}
+
+.calculatorHolder {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  position: relative;
+
+}
+
+.calculatorSlider {
+
+}
+
+.calculatorSlider {
+  width: 100%;
+  position: relative;
+}
+
+.slideRatio {
+  position: absolute;
+  bottom: 17px;
+  left: 15px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  outline: none; /* Remove outline */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 1px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #6dbf36; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #6dbf36; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.calculatorURL {
+  width: 350px;
+}
+
+.calculatingCover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(255,255,255,0.6);
+  z-index: 999;
+  cursor: not-allowed;
+}
+
+.recommendationsCarrier a {
+  font-weight: bold;
+  color: #108944;
+  border-bottom: 2px solid #108944;
+}
+
+.carbonImpactSection {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .slider {
+      overflow: hidden;
+      -webkit-appearance: none;
+      background-color: #f1f3f5;
+      border-radius: 15px;
+      height: 44px;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      cursor: ew-resize;
+      box-shadow: -1000px 0 0 1000px #6dbf36;
+    }
+}
+
+.results {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: space-between;
+}
+
+.resultsLeft {
+  flex: 2;
+}
+
+.resultsRight {
+  margin-left: 40px;
+}
+
+
+@media only screen and (max-width: 700px) {
+
+  .results {
+    flex-direction: column;
+  }
+
+  .calculatorURL {
+    width: auto;
+  }
+
+  .calculatorHolder {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .menuToggler {
+    display: flex;
+    width: 50px;
+    height: 40px;
+    background: #fff;
+    position: absolute;
+    top: 33px;
+    right: 25px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .headerLinks {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headerLinks .menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .headerLinks .menu a {
+    padding: 10px 0px;
+    border-bottom: 1px solid #eee;
+  }
+
+
+  .headerLinks .menu a:first-child {
+    margin-top: 15px;
+  }
+
+  .mobileMenuActive {
+    width: 100%;
+    overflow: hidden;
+  }
+
+
+  .mobileMenuPassive {
+    max-height: 0px;
+    overflow: hidden;
+  }
+
+  .mobileMenuToggle {
+    max-height: 300px;
+  }
+
+  .resultsRight {
+    margin-left: 0px;
+  }
+
 }

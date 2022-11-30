@@ -1,0 +1,1137 @@
+[
+  {
+    "name": "Afghanistan",
+    "code": "AFG",
+    "intensity": 115.38463
+  },
+  {
+    "name": "Africa",
+    "code": "",
+    "intensity": 442.7178
+  },
+  {
+    "name": "Albania",
+    "code": "ALB",
+    "intensity": 24.482107
+  },
+  {
+    "name": "Algeria",
+    "code": "DZA",
+    "intensity": 449.74878
+  },
+  {
+    "name": "American Samoa",
+    "code": "ASM",
+    "intensity": 733.3333
+  },
+  {
+    "name": "Angola",
+    "code": "AGO",
+    "intensity": 168.86728
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "code": "ATG",
+    "intensity": 687.5
+  },
+  {
+    "name": "Argentina",
+    "code": "ARG",
+    "intensity": 336.00018
+  },
+  {
+    "name": "Armenia",
+    "code": "ARM",
+    "intensity": 208.73123
+  },
+  {
+    "name": "Aruba",
+    "code": "ABW",
+    "intensity": 579.5454
+  },
+  {
+    "name": "Asia",
+    "code": "",
+    "intensity": 526.0313
+  },
+  {
+    "name": "Australia",
+    "code": "AUS",
+    "intensity": 514.3418
+  },
+  {
+    "name": "Austria",
+    "code": "AUT",
+    "intensity": 82.68301
+  },
+  {
+    "name": "Azerbaijan",
+    "code": "AZE",
+    "intensity": 504.2745
+  },
+  {
+    "name": "Bahamas",
+    "code": "BHS",
+    "intensity": 698.49243
+  },
+  {
+    "name": "Bahrain",
+    "code": "BHR",
+    "intensity": 489.95312
+  },
+  {
+    "name": "Bangladesh",
+    "code": "BGD",
+    "intensity": 476.36734
+  },
+  {
+    "name": "Barbados",
+    "code": "BRB",
+    "intensity": 670.103
+  },
+  {
+    "name": "Belarus",
+    "code": "BLR",
+    "intensity": 439.9638
+  },
+  {
+    "name": "Belgium",
+    "code": "BEL",
+    "intensity": 178.99295
+  },
+  {
+    "name": "Belize",
+    "code": "BLZ",
+    "intensity": 474.57626
+  },
+  {
+    "name": "Benin",
+    "code": "BEN",
+    "intensity": 652.17395
+  },
+  {
+    "name": "Bhutan",
+    "code": "BTN",
+    "intensity": 23.463686
+  },
+  {
+    "name": "Bolivia",
+    "code": "BOL",
+    "intensity": 317.757
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "code": "BIH",
+    "intensity": 530.6604
+  },
+  {
+    "name": "Botswana",
+    "code": "BWA",
+    "intensity": 800
+  },
+  {
+    "name": "Brazil",
+    "code": "BRA",
+    "intensity": 113.20702
+  },
+  {
+    "name": "British Virgin Islands",
+    "code": "VGB",
+    "intensity": 692.3078
+  },
+  {
+    "name": "Brunei",
+    "code": "BRN",
+    "intensity": 659.0909
+  },
+  {
+    "name": "Bulgaria",
+    "code": "BGR",
+    "intensity": 367.03534
+  },
+  {
+    "name": "Burkina Faso",
+    "code": "BFA",
+    "intensity": 631.25
+  },
+  {
+    "name": "Burundi",
+    "code": "BDI",
+    "intensity": 257.14288
+  },
+  {
+    "name": "Cambodia",
+    "code": "KHM",
+    "intensity": 423.52942
+  },
+  {
+    "name": "Cameroon",
+    "code": "CMR",
+    "intensity": 243.7071
+  },
+  {
+    "name": "Canada",
+    "code": "CAN",
+    "intensity": 116.97006
+  },
+  {
+    "name": "Cape Verde",
+    "code": "CPV",
+    "intensity": 555.55554
+  },
+  {
+    "name": "Cayman Islands",
+    "code": "CYM",
+    "intensity": 681.1594
+  },
+  {
+    "name": "Central African Republic",
+    "code": "CAF",
+    "intensity": 0
+  },
+  {
+    "name": "Chad",
+    "code": "TCD",
+    "intensity": 678.5714
+  },
+  {
+    "name": "Chile",
+    "code": "CHL",
+    "intensity": 368.63483
+  },
+  {
+    "name": "China",
+    "code": "CHN",
+    "intensity": 545.8873
+  },
+  {
+    "name": "Colombia",
+    "code": "COL",
+    "intensity": 192.62947
+  },
+  {
+    "name": "Comoros",
+    "code": "COM",
+    "intensity": 692.3078
+  },
+  {
+    "name": "Congo",
+    "code": "COG",
+    "intensity": 364.14563
+  },
+  {
+    "name": "Cook Islands",
+    "code": "COK",
+    "intensity": 500
+  },
+  {
+    "name": "Costa Rica",
+    "code": "CRI",
+    "intensity": 32.59005
+  },
+  {
+    "name": "Cote d'Ivoire",
+    "code": "CIV",
+    "intensity": 421.38367
+  },
+  {
+    "name": "Croatia",
+    "code": "HRV",
+    "intensity": 149.41765
+  },
+  {
+    "name": "Cuba",
+    "code": "CUB",
+    "intensity": 575.9049
+  },
+  {
+    "name": "Cyprus",
+    "code": "CYP",
+    "intensity": 618.6586
+  },
+  {
+    "name": "Czechia",
+    "code": "CZE",
+    "intensity": 405.21823
+  },
+  {
+    "name": "Democratic Republic of Congo",
+    "code": "COD",
+    "intensity": 26.002169
+  },
+  {
+    "name": "Denmark",
+    "code": "DNK",
+    "intensity": 104.40789
+  },
+  {
+    "name": "Djibouti",
+    "code": "DJI",
+    "intensity": 800
+  },
+  {
+    "name": "Dominica",
+    "code": "DMA",
+    "intensity": 500
+  },
+  {
+    "name": "Dominican Republic",
+    "code": "DOM",
+    "intensity": 605.7243
+  },
+  {
+    "name": "Ecuador",
+    "code": "ECU",
+    "intensity": 150.40967
+  },
+  {
+    "name": "Egypt",
+    "code": "EGY",
+    "intensity": 370.12198
+  },
+  {
+    "name": "El Salvador",
+    "code": "SLV",
+    "intensity": 245.85219
+  },
+  {
+    "name": "Equatorial Guinea",
+    "code": "GNQ",
+    "intensity": 628.31854
+  },
+  {
+    "name": "Eritrea",
+    "code": "ERI",
+    "intensity": 659.0909
+  },
+  {
+    "name": "Estonia",
+    "code": "EST",
+    "intensity": 671.5353
+  },
+  {
+    "name": "Eswatini",
+    "code": "SWZ",
+    "intensity": 203.12498
+  },
+  {
+    "name": "Ethiopia",
+    "code": "ETH",
+    "intensity": 25.441698
+  },
+  {
+    "name": "Europe",
+    "code": "",
+    "intensity": 264.53705
+  },
+  {
+    "name": "European Union (27)",
+    "code": "",
+    "intensity": 251.25983
+  },
+  {
+    "name": "Faeroe Islands",
+    "code": "FRO",
+    "intensity": 428.57147
+  },
+  {
+    "name": "Falkland Islands",
+    "code": "FLK",
+    "intensity": 500
+  },
+  {
+    "name": "Fiji",
+    "code": "FJI",
+    "intensity": 292.92926
+  },
+  {
+    "name": "Finland",
+    "code": "FIN",
+    "intensity": 57.060486
+  },
+  {
+    "name": "France",
+    "code": "FRA",
+    "intensity": 57.28518
+  },
+  {
+    "name": "French Guiana",
+    "code": "GUF",
+    "intensity": 350.51547
+  },
+  {
+    "name": "French Polynesia",
+    "code": "PYF",
+    "intensity": 469.69696
+  },
+  {
+    "name": "G20 (Ember)",
+    "code": "",
+    "intensity": 439.27856
+  },
+  {
+    "name": "G7 (Ember)",
+    "code": "",
+    "intensity": 329.67374
+  },
+  {
+    "name": "Gabon",
+    "code": "GAB",
+    "intensity": 294.91525
+  },
+  {
+    "name": "Gambia",
+    "code": "GMB",
+    "intensity": 689.65515
+  },
+  {
+    "name": "Georgia",
+    "code": "GEO",
+    "intensity": 141.57707
+  },
+  {
+    "name": "Germany",
+    "code": "DEU",
+    "intensity": 313.78485
+  },
+  {
+    "name": "Ghana",
+    "code": "GHA",
+    "intensity": 355.04724
+  },
+  {
+    "name": "Greece",
+    "code": "GRC",
+    "intensity": 476.66534
+  },
+  {
+    "name": "Greenland",
+    "code": "GRL",
+    "intensity": 118.644066
+  },
+  {
+    "name": "Grenada",
+    "code": "GRD",
+    "intensity": 700
+  },
+  {
+    "name": "Guadeloupe",
+    "code": "GLP",
+    "intensity": 588.6076
+  },
+  {
+    "name": "Guam",
+    "code": "GUM",
+    "intensity": 670.58826
+  },
+  {
+    "name": "Guatemala",
+    "code": "GTM",
+    "intensity": 332.0158
+  },
+  {
+    "name": "Guinea",
+    "code": "GIN",
+    "intensity": 175
+  },
+  {
+    "name": "Guinea-Bissau",
+    "code": "GNB",
+    "intensity": 750
+  },
+  {
+    "name": "Guyana",
+    "code": "GUY",
+    "intensity": 636.3636
+  },
+  {
+    "name": "Haiti",
+    "code": "HTI",
+    "intensity": 606.383
+  },
+  {
+    "name": "High-income countries",
+    "code": "",
+    "intensity": 336.81705
+  },
+  {
+    "name": "Honduras",
+    "code": "HND",
+    "intensity": 358.64594
+  },
+  {
+    "name": "Hong Kong",
+    "code": "HKG",
+    "intensity": 644.89954
+  },
+  {
+    "name": "Hungary",
+    "code": "HUN",
+    "intensity": 229.02948
+  },
+  {
+    "name": "Iceland",
+    "code": "ISL",
+    "intensity": 28.75471
+  },
+  {
+    "name": "India",
+    "code": "IND",
+    "intensity": 624.3738
+  },
+  {
+    "name": "Indonesia",
+    "code": "IDN",
+    "intensity": 624.6789
+  },
+  {
+    "name": "Iran",
+    "code": "IRN",
+    "intensity": 440.39627
+  },
+  {
+    "name": "Iraq",
+    "code": "IRQ",
+    "intensity": 419.7325
+  },
+  {
+    "name": "Ireland",
+    "code": "IRL",
+    "intensity": 278.71994
+  },
+  {
+    "name": "Israel",
+    "code": "ISR",
+    "intensity": 527.77277
+  },
+  {
+    "name": "Italy",
+    "code": "ITA",
+    "intensity": 221.00943
+  },
+  {
+    "name": "Jamaica",
+    "code": "JAM",
+    "intensity": 532.3383
+  },
+  {
+    "name": "Japan",
+    "code": "JPN",
+    "intensity": 426.11646
+  },
+  {
+    "name": "Jordan",
+    "code": "JOR",
+    "intensity": 432.20337
+  },
+  {
+    "name": "Kazakhstan",
+    "code": "KAZ",
+    "intensity": 650.3823
+  },
+  {
+    "name": "Kenya",
+    "code": "KEN",
+    "intensity": 88.888885
+  },
+  {
+    "name": "Kiribati",
+    "code": "KIR",
+    "intensity": 666.6667
+  },
+  {
+    "name": "Kosovo",
+    "code": "OWID_KOS",
+    "intensity": 777.61194
+  },
+  {
+    "name": "Kuwait",
+    "code": "KWT",
+    "intensity": 438.1219
+  },
+  {
+    "name": "Kyrgyzstan",
+    "code": "KGZ",
+    "intensity": 91.52752
+  },
+  {
+    "name": "Laos",
+    "code": "LAO",
+    "intensity": 297.63098
+  },
+  {
+    "name": "Latin America and Caribbean (Ember)",
+    "code": "",
+    "intensity": 243.93806
+  },
+  {
+    "name": "Latvia",
+    "code": "LVA",
+    "intensity": 174.61264
+  },
+  {
+    "name": "Lebanon",
+    "code": "LBN",
+    "intensity": 544.89166
+  },
+  {
+    "name": "Lesotho",
+    "code": "LSO",
+    "intensity": 20
+  },
+  {
+    "name": "Liberia",
+    "code": "LBR",
+    "intensity": 292.13483
+  },
+  {
+    "name": "Libya",
+    "code": "LBY",
+    "intensity": 496.51044
+  },
+  {
+    "name": "Lithuania",
+    "code": "LTU",
+    "intensity": 181.2415
+  },
+  {
+    "name": "Low-income countries",
+    "code": "",
+    "intensity": 235.95001
+  },
+  {
+    "name": "Lower-middle-income countries",
+    "code": "",
+    "intensity": 562.76807
+  },
+  {
+    "name": "Luxembourg",
+    "code": "LUX",
+    "intensity": 0
+  },
+  {
+    "name": "Macao",
+    "code": "MAC",
+    "intensity": 482.14288
+  },
+  {
+    "name": "Madagascar",
+    "code": "MDG",
+    "intensity": 452.8302
+  },
+  {
+    "name": "Malawi",
+    "code": "MWI",
+    "intensity": 113.20756
+  },
+  {
+    "name": "Malaysia",
+    "code": "MYS",
+    "intensity": 575.97034
+  },
+  {
+    "name": "Maldives",
+    "code": "MDV",
+    "intensity": 701.7544
+  },
+  {
+    "name": "Mali",
+    "code": "MLI",
+    "intensity": 465.625
+  },
+  {
+    "name": "Malta",
+    "code": "MLT",
+    "intensity": 471.69815
+  },
+  {
+    "name": "Martinique",
+    "code": "MTQ",
+    "intensity": 653.5948
+  },
+  {
+    "name": "Mauritania",
+    "code": "MRT",
+    "intensity": 522.7273
+  },
+  {
+    "name": "Mauritius",
+    "code": "MUS",
+    "intensity": 613.1387
+  },
+  {
+    "name": "Mexico",
+    "code": "MEX",
+    "intensity": 390.35858
+  },
+  {
+    "name": "Middle East (Ember)",
+    "code": "",
+    "intensity": 517.9436
+  },
+  {
+    "name": "Moldova",
+    "code": "MDA",
+    "intensity": 647.0588
+  },
+  {
+    "name": "Mongolia",
+    "code": "MNG",
+    "intensity": 732.64404
+  },
+  {
+    "name": "Montenegro",
+    "code": "MNE",
+    "intensity": 421.05264
+  },
+  {
+    "name": "Montserrat",
+    "code": "MSR",
+    "intensity": 1000
+  },
+  {
+    "name": "Morocco",
+    "code": "MAR",
+    "intensity": 571.06445
+  },
+  {
+    "name": "Mozambique",
+    "code": "MOZ",
+    "intensity": 129.77527
+  },
+  {
+    "name": "Myanmar",
+    "code": "MMR",
+    "intensity": 311.10156
+  },
+  {
+    "name": "Namibia",
+    "code": "NAM",
+    "intensity": 56.603775
+  },
+  {
+    "name": "Nauru",
+    "code": "NRU",
+    "intensity": 750
+  },
+  {
+    "name": "Nepal",
+    "code": "NPL",
+    "intensity": 22.653723
+  },
+  {
+    "name": "Netherlands",
+    "code": "NLD",
+    "intensity": 323.74643
+  },
+  {
+    "name": "New Caledonia",
+    "code": "NCL",
+    "intensity": 640
+  },
+  {
+    "name": "New Zealand",
+    "code": "NZL",
+    "intensity": 137.40857
+  },
+  {
+    "name": "Nicaragua",
+    "code": "NIC",
+    "intensity": 343.34766
+  },
+  {
+    "name": "Niger",
+    "code": "NER",
+    "intensity": 675.00006
+  },
+  {
+    "name": "Nigeria",
+    "code": "NGA",
+    "intensity": 395.2415
+  },
+  {
+    "name": "North America",
+    "code": "",
+    "intensity": 328.8166
+  },
+  {
+    "name": "North Korea",
+    "code": "PRK",
+    "intensity": 149.55203
+  },
+  {
+    "name": "North Macedonia",
+    "code": "MKD",
+    "intensity": 527.45074
+  },
+  {
+    "name": "Norway",
+    "code": "NOR",
+    "intensity": 30.80475
+  },
+  {
+    "name": "OECD (Ember)",
+    "code": "",
+    "intensity": 332.63953
+  },
+  {
+    "name": "Oceania",
+    "code": "",
+    "intensity": 480.96838
+  },
+  {
+    "name": "Oman",
+    "code": "OMN",
+    "intensity": 440.53098
+  },
+  {
+    "name": "Pakistan",
+    "code": "PAK",
+    "intensity": 294.1804
+  },
+  {
+    "name": "Palestine",
+    "code": "PSE",
+    "intensity": 629.0322
+  },
+  {
+    "name": "Panama",
+    "code": "PAN",
+    "intensity": 183.39417
+  },
+  {
+    "name": "Papua New Guinea",
+    "code": "PNG",
+    "intensity": 563.6793
+  },
+  {
+    "name": "Paraguay",
+    "code": "PRY",
+    "intensity": 23.915686
+  },
+  {
+    "name": "Peru",
+    "code": "PER",
+    "intensity": 222.16609
+  },
+  {
+    "name": "Philippines",
+    "code": "PHL",
+    "intensity": 548.0773
+  },
+  {
+    "name": "Poland",
+    "code": "POL",
+    "intensity": 725.466
+  },
+  {
+    "name": "Portugal",
+    "code": "PRT",
+    "intensity": 207.3359
+  },
+  {
+    "name": "Puerto Rico",
+    "code": "PRI",
+    "intensity": 664.7727
+  },
+  {
+    "name": "Qatar",
+    "code": "QAT",
+    "intensity": 442.76172
+  },
+  {
+    "name": "Reunion",
+    "code": "REU",
+    "intensity": 449.32434
+  },
+  {
+    "name": "Romania",
+    "code": "ROU",
+    "intensity": 232.92508
+  },
+  {
+    "name": "Russia",
+    "code": "RUS",
+    "intensity": 329.08038
+  },
+  {
+    "name": "Rwanda",
+    "code": "RWA",
+    "intensity": 289.15662
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "code": "KNA",
+    "intensity": 666.6667
+  },
+  {
+    "name": "Saint Lucia",
+    "code": "LCA",
+    "intensity": 696.9697
+  },
+  {
+    "name": "Saint Pierre and Miquelon",
+    "code": "SPM",
+    "intensity": 800
+  },
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "code": "VCT",
+    "intensity": 533.3333
+  },
+  {
+    "name": "Samoa",
+    "code": "WSM",
+    "intensity": 500
+  },
+  {
+    "name": "Sao Tome and Principe",
+    "code": "STP",
+    "intensity": 600
+  },
+  {
+    "name": "Saudi Arabia",
+    "code": "SAU",
+    "intensity": 575.3319
+  },
+  {
+    "name": "Senegal",
+    "code": "SEN",
+    "intensity": 536.29034
+  },
+  {
+    "name": "Serbia",
+    "code": "SRB",
+    "intensity": 593.28357
+  },
+  {
+    "name": "Seychelles",
+    "code": "SYC",
+    "intensity": 698.1133
+  },
+  {
+    "name": "Sierra Leone",
+    "code": "SLE",
+    "intensity": 47.61905
+  },
+  {
+    "name": "Singapore",
+    "code": "SGP",
+    "intensity": 463.148
+  },
+  {
+    "name": "Slovakia",
+    "code": "SVK",
+    "intensity": 138.85513
+  },
+  {
+    "name": "Slovenia",
+    "code": "SVN",
+    "intensity": 290.85495
+  },
+  {
+    "name": "Solomon Islands",
+    "code": "SLB",
+    "intensity": 700
+  },
+  {
+    "name": "Somalia",
+    "code": "SOM",
+    "intensity": 648.6486
+  },
+  {
+    "name": "South Africa",
+    "code": "ZAF",
+    "intensity": 676.0657
+  },
+  {
+    "name": "South America",
+    "code": "",
+    "intensity": 177.43779
+  },
+  {
+    "name": "South Korea",
+    "code": "KOR",
+    "intensity": 425.6268
+  },
+  {
+    "name": "South Sudan",
+    "code": "SSD",
+    "intensity": 698.1133
+  },
+  {
+    "name": "Spain",
+    "code": "ESP",
+    "intensity": 174.65727
+  },
+  {
+    "name": "Sri Lanka",
+    "code": "LKA",
+    "intensity": 439.22418
+  },
+  {
+    "name": "Sudan",
+    "code": "SDN",
+    "intensity": 259.31232
+  },
+  {
+    "name": "Suriname",
+    "code": "SUR",
+    "intensity": 298.7013
+  },
+  {
+    "name": "Sweden",
+    "code": "SWE",
+    "intensity": 12.208745
+  },
+  {
+    "name": "Switzerland",
+    "code": "CHE",
+    "intensity": 54.522144
+  },
+  {
+    "name": "Syria",
+    "code": "SYR",
+    "intensity": 545.2245
+  },
+  {
+    "name": "Taiwan",
+    "code": "TWN",
+    "intensity": 563.6868
+  },
+  {
+    "name": "Tajikistan",
+    "code": "TJK",
+    "intensity": 83.24382
+  },
+  {
+    "name": "Tanzania",
+    "code": "TZA",
+    "intensity": 380.22287
+  },
+  {
+    "name": "Thailand",
+    "code": "THA",
+    "intensity": 507.1285
+  },
+  {
+    "name": "Timor",
+    "code": "TLS",
+    "intensity": 700
+  },
+  {
+    "name": "Togo",
+    "code": "TGO",
+    "intensity": 576.92316
+  },
+  {
+    "name": "Tonga",
+    "code": "TON",
+    "intensity": 666.6667
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "code": "TTO",
+    "intensity": 497.9688
+  },
+  {
+    "name": "Tunisia",
+    "code": "TUN",
+    "intensity": 470.829
+  },
+  {
+    "name": "Turkey",
+    "code": "TUR",
+    "intensity": 409.58176
+  },
+  {
+    "name": "Turkmenistan",
+    "code": "TKM",
+    "intensity": 412.32855
+  },
+  {
+    "name": "Turks and Caicos Islands",
+    "code": "TCA",
+    "intensity": 720.00006
+  },
+  {
+    "name": "Uganda",
+    "code": "UGA",
+    "intensity": 77.0878
+  },
+  {
+    "name": "Ukraine",
+    "code": "UKR",
+    "intensity": 280.1056
+  },
+  {
+    "name": "United Arab Emirates",
+    "code": "ARE",
+    "intensity": 427.86282
+  },
+  {
+    "name": "United Kingdom",
+    "code": "GBR",
+    "intensity": 242.15056
+  },
+  {
+    "name": "United States",
+    "code": "USA",
+    "intensity": 348.54263
+  },
+  {
+    "name": "United States Virgin Islands",
+    "code": "VIR",
+    "intensity": 687.5
+  },
+  {
+    "name": "Upper-middle-income countries",
+    "code": "",
+    "intensity": 495.5746
+  },
+  {
+    "name": "Uruguay",
+    "code": "URY",
+    "intensity": 112.4031
+  },
+  {
+    "name": "Uzbekistan",
+    "code": "UZB",
+    "intensity": 426.88644
+  },
+  {
+    "name": "Vanuatu",
+    "code": "VUT",
+    "intensity": 571.4286
+  },
+  {
+    "name": "Venezuela",
+    "code": "VEN",
+    "intensity": 231.05603
+  },
+  {
+    "name": "Vietnam",
+    "code": "VNM",
+    "intensity": 476.65698
+  },
+  {
+    "name": "World",
+    "code": "OWID_WRL",
+    "intensity": 421.854
+  },
+  {
+    "name": "Yemen",
+    "code": "YEM",
+    "intensity": 538.46155
+  },
+  {
+    "name": "Zambia",
+    "code": "ZMB",
+    "intensity": 120.77597
+  },
+  {
+    "name": "Zimbabwe",
+    "code": "ZWE",
+    "intensity": 279.0279
+  }
+]

@@ -1,0 +1,20 @@
+.footer {
+  background-color: #E9E8E1;
+  min-height: 200px;
+  background-position: top center;
+  margin-top: 50px;
+}
+
+.footerInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  padding: 8px;
+  font-size: 16px;
+  max-width: 900px;
+  text-align: center;
+}

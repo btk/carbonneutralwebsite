@@ -4,11 +4,11 @@
 
 .hero {
   width: 100%;
-  height: 100vh;
+  min-height: 600px;
   background-color: #E9E8E1;
   background-image: url("/tree-pattern.png");
   background-repeat: repeat-x;
-  background-size: 1000px;
+  background-size: 700px;
   background-position: bottom center;
   border-bottom: 5px solid #E9E8E1;
 }
