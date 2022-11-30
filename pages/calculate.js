@@ -13,16 +13,17 @@ import displayValue from '../js/displayValue'
 import intensityFactor from '../js/intensityFactor'
 import recommendations from '../public/recommendations'
 import ReactMarkdown from 'react-markdown'
+import {
+  CARBON_PER_KB,
+  TREE_EMISSON_PER_YEAR,
+  CARBON_PER_PAGE_LOAD_ON_DEVICE,
+  AVG_LCP_TIME,
+  OVERALL_LIGHTHOUSE_SCORE_EFFECT,
+  US_AVG_CARBON_INTENSITY
+} from '../data/variables.json'
 
 import { useState, useEffect } from 'react'
 import { Button, Text, Container, Card, Row, Spacer, Collapse, Navbar, Dropdown, Avatar, Input } from '@nextui-org/react';
-
-const CARBON_PER_KB = 0.0000845703125; // g
-const TREE_EMISSON_PER_YEAR = 24000.00;// g
-const CARBON_PER_PAGE_LOAD_ON_DEVICE = 0.002183706; // g
-const AVG_LCP_TIME = 2.5; // s
-const OVERALL_LIGHTHOUSE_SCORE_EFFECT = 20; // out of 100
-const US_AVG_CARBON_INTENSITY = 348; // gCO2/kWh
 
 export default function Home() {
   const [url, setUrl] = useState("");
