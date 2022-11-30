@@ -24,7 +24,7 @@ const handler = async (req, res) => {
   url = url || "http://apple.com/";
 
   try {
-    let results = await post('https://crkt7fjddh2cy6z2xdzuuixwqy0fagsl.lambda-url.us-east-1.on.aws/', url);
+    let results = await post(process.env.LIGHTHOUSE_LAMBDA_URI, url);
     res.status(200).json(results)
 
     //await chrome.kill();
