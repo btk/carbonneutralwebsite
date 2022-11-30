@@ -178,35 +178,72 @@ export default function Home() {
           <div className="results">
             <div className="resultsLeft">
               <h3>Results</h3>
-              <big>Performance Score: <b>{results.score} / 100</b></big>
-              <p>&nbsp;</p>
-              <p>FirstVisit Load Kb: {displayValue(footPrint.sizeInKb.firstVisit * 1000, "B")}</p>
-              <p>ReturningVisit Load Kb: {displayValue(footPrint.sizeInKb.returningVisit * 1000, "B")}</p>
-              <p></p>
 
-              <p>FirstVisit Natural Impact Kb: {displayValue(footPrint.impactInKb.firstVisit * 1000, "B")}</p>
-              <p>ReturningVisit Natural Impact Kb: {displayValue(footPrint.impactInKb.returningVisit * 1000, "B")}</p>
-              <p></p>
-
-              <p>FirstVisit Carbon Footprint: {displayValue(footPrint.impactInCarbon.firstVisit, "g")}</p>
-              <p>ReturningVisit Carbon Footprint: {displayValue(footPrint.impactInCarbon.returningVisit, "g")}</p>
-              <p></p>
-
-              <p>Total Impact in Carbon: {displayValue(footPrint.totalImpactInCarbon, "g")}/yr</p>
-              <p>Carbon Intensity Multiplier: <b>x{displayValue(intensityFactorMultip, "")} times</b> more than United States ({hostData.country})</p>
-              <p>Total Impact in Carbon with Intensity: {displayValue(footPrint.totalImpactInCarbon * intensityFactorMultip, "g")}/yr</p>
-              <p>LCP TIME: {lcpTime}</p>
-
-
-              <p><big>Trees to offset: <b>{Math.ceil(footPrint.treeToOffset)} Trees</b></big></p>
-
-
-              {hostData != null &&
-                <div>
-                  <p>{hostData.city} {hostData.country}, {hostData.countryCode}</p>
-                  <p>ISP: {hostData.isp}</p>
+              <div style={{display: "flex", flexDirection: "row", width: "100%"}}>
+                <div className="resultCol">
+                  <h4>Total Carbon Impact</h4>
+                  <p>{displayValue(footPrint.totalImpactInCarbon * intensityFactorMultip, "g")}</p>
+                  <span>Per Year</span>
                 </div>
-              }
+
+                <div className="resultCol">
+                  <h4>Performance Metric Score</h4>
+                  <p>{results.score}</p>
+                  <span>Out of 100</span>
+                </div>
+              </div>
+
+              <div className="resultCol" style={{marginRight: 0}}>
+                {hostData != null &&
+                  <div>
+                    <h4>Server Location</h4>
+                    <p>{hostData.city} {hostData.country}, {hostData.countryCode} <b style={{textAlign: "right", width: "100%"}}>(x{displayValue(intensityFactorMultip, "")} more emission than US)</b></p>
+                    <span>ISP: {hostData.isp}</span>
+                  </div>
+                }
+              </div>
+
+
+              <div style={{display: "flex", flexDirection: "row", width: "100%"}}>
+                <div className="resultCol">
+                  <h4>First Visit Load Size</h4>
+                  <p>{displayValue(footPrint.sizeInKb.firstVisit * 1000, "B")}</p>
+                  <span>Per page load</span>
+                </div>
+
+                <div className="resultCol">
+                  <h4>Returning Visit Load Size</h4>
+                  <p>{displayValue(footPrint.sizeInKb.returningVisit * 1000, "B")}</p>
+                  <span>Per page load</span>
+                </div>
+              </div>
+
+              <div style={{display: "flex", flexDirection: "row", width: "100%"}}>
+                <div className="resultCol">
+                  <h4>First Visit Carbon Emission</h4>
+                  <p>{displayValue(footPrint.impactInCarbon.firstVisit, "g")}</p>
+                  <span>Per page load</span>
+                </div>
+
+                <div className="resultCol">
+                  <h4>Returning Visit Carbon Emission</h4>
+                  <p>{displayValue(footPrint.impactInCarbon.returningVisit, "g")}</p>
+                  <span>Per page load</span>
+                </div>
+              </div>
+
+              <div className="resultCol" style={{marginRight: 0}}>
+                <h4>Largest Contentful Paint</h4>
+                <p>{lcpTime}</p>
+                <span>Avg {AVG_LCP_TIME}s</span>
+              </div>
+
+
+              <div className="resultCol resultTree">
+                <h4>Trees to Offset Carbon Emission</h4>
+                <p>{Math.ceil(footPrint.treeToOffset)} Trees</p>
+                <span>&nbsp;</span>
+              </div>
 
               {results &&
                 <div style={{marginTop: 30}} className="recommendationsCarrier">

@@ -1,7 +1,7 @@
 export default function displayValue(amount, type) {
   if(amount > 1000000){
     if(type == "g"){
-      return (amount/1000/1000).toFixed(2) + " tonnes";
+      return (amount/1000/1000).toFixed(2) + " Tonnes";
     }
     return (amount/1000/1000).toFixed(2) + " M" + type;
   }else if(amount > 1000){
