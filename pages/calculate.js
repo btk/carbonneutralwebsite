@@ -13,17 +13,19 @@ import displayValue from '../js/displayValue'
 import intensityFactor from '../js/intensityFactor'
 import recommendations from '../public/recommendations'
 import ReactMarkdown from 'react-markdown'
-import {
+import VARIABLES from '../data/variables.json'
+
+import { useState, useEffect } from 'react'
+import { Button, Text, Container, Card, Row, Spacer, Collapse, Navbar, Dropdown, Avatar, Input } from '@nextui-org/react';
+
+const {
   CARBON_PER_KB,
   TREE_EMISSON_PER_YEAR,
   CARBON_PER_PAGE_LOAD_ON_DEVICE,
   AVG_LCP_TIME,
   OVERALL_LIGHTHOUSE_SCORE_EFFECT,
   US_AVG_CARBON_INTENSITY
-} from '../data/variables.json'
-
-import { useState, useEffect } from 'react'
-import { Button, Text, Container, Card, Row, Spacer, Collapse, Navbar, Dropdown, Avatar, Input } from '@nextui-org/react';
+} = VARIABLES;
 
 export default function Home() {
   const [url, setUrl] = useState("");
