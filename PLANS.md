@@ -1,10 +1,15 @@
 # Carbon Neutral Website Plans
-- main user flow is done
-- Recommentations, pagespeed insights by google
+- main calculation user flow ✅
+- Recommentations
+  *) pagespeed insights by google with ✅
+  *) info about carbon emission 20 out of 40 metrics ✅
+- publish on github with data references ✅
 
-- better
-- landing page (explain how it works with illustrations)
-- virtual forest 
+- better stat interface
+- udpate data referecnes
+- add feedback link after recommendation section
+- landing page design (explain how calculation works with illustrations)
+- virtual forest
   *) which is badges for websites
   *) loading this webpage emits this much carbon
 - plant trees (will take payments and than plant trees for it)
