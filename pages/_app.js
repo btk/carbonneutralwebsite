@@ -5,6 +5,7 @@ import { DM_Sans } from '@next/font/google'
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = DM_Sans({
+    subsets: ['latin'],
     weight: ['400', '500', '700'],
 })
 
