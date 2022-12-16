@@ -322,7 +322,7 @@ ${text} for webpage ${url}.
 
         {results &&
           <a href="https://github.com/btk/carbonneutralwebsite/issues/new">
-            <div className="resultCol" onClick={() => copyText(`Largest Contentful Paint is ${lcpTime}`)} style={{marginTop: 40, marginRight: 0}}>
+            <div className="resultCol">
               <h4>Do you have feedback?</h4>
               <span>This project is still in beta stage. You can give feedback and detail your problems by creating a new issue in this Github repository.</span>
             </div>
