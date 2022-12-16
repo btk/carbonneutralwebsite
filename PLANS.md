@@ -5,9 +5,13 @@
   *) info about carbon emission 20 out of 40 metrics ✅
 - publish on github with data references ✅
 
-- better stat interface
+- better stat interface ✅
+- copy text system ✅
+- soft calculation ✅
+- add feedback link after recommendation section ✅
+- empty pages ✅
+
 - udpate data referecnes
-- add feedback link after recommendation section
 - landing page design (explain how calculation works with illustrations)
 - virtual forest
   *) which is badges for websites
