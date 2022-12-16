@@ -40,6 +40,27 @@ export default function Home() {
   const [lcpMultip, setLcpMultip] = useState(1);
   const [lcpTime, setLcpTime] = useState(AVG_LCP_TIME);
 
+  useEffect(() => {
+    if(results.score){
+      console.log("pv changed to", pageView, ratio);
+      softCalculate();
+    }
+  }, [pageView, ratio])
+
+  let softCalculate = async () => {
+    setCalculating(true);
+    let calculation = results;
+    let pageSizeInKb = calculatePageSize(calculation.audits["network-requests"].details.items);
+    setPageSize(pageSizeInKb);
+
+    setLcpMultip(calculation.audits["largest-contentful-paint"].score)
+    setLcpTime(calculation.audits["largest-contentful-paint"].displayValue);
+
+    let calculatedFootPrint = calculateCarbonFootPrint(pageSizeInKb, calculation.score);
+    setFootPrint(calculatedFootPrint);
+    setCalculating(false);
+  }
+
   let calculate = async () => {
     setCalculating(true);
     setHostData(null);
@@ -242,7 +263,7 @@ export default function Home() {
               <div className="resultCol resultTree">
                 <h4>Trees to Offset Carbon Emission</h4>
                 <p>{Math.ceil(footPrint.treeToOffset)} Trees</p>
-                <span>&nbsp;</span>
+                <span>Per Year</span>
               </div>
 
               {results &&
