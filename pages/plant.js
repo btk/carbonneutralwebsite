@@ -33,7 +33,7 @@ export default function Home() {
         <Spacer/>
         <Spacer/>
         <h1 style={{fontSize: 32}}>Plant Trees <span className="soon">SOON</span></h1>
-        <p style={{fontSize: 19}}>Carbon Neutral Website can help you plant the trees in order to offset your webpage's carbon footprint, here is more information.</p>
+        <p style={{fontSize: 19}}>Carbon Neutral Website can help you plant the trees in order to offset your webpage&lsquo;s carbon footprint, here is more information.</p>
 
         <div className="resultCol" style={{height: 400, marginTop: 20}}></div>
       </Container>
