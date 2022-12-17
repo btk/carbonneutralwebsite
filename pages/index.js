@@ -45,6 +45,15 @@ export default function Home() {
           <Link href="/calculate">
             <Button size="lg" color="gradient"  css={{ $$primaryColor: "#330025" }} auto>Start Calculating</Button>
           </Link>
+
+          <Container sm gap={0}>
+            <Spacer y={1} />
+            <img src="/illustrations/illustration1.svg" width={300} alt="il1"/>
+            <img src="/illustrations/illustration2.svg" width={300} alt="il2"/>
+            <img src="/illustrations/illustration3.svg" width={300} alt="il3"/>
+            <img src="/illustrations/illustration4.svg" width={300} alt="il4"/>
+          </Container>
+
         </div>
       </div>
 
