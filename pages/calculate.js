@@ -168,7 +168,6 @@ ${text} for webpage ${url}.
   }
 
   let getBannerURL = (style) => {
-    console.log(url);
     let domain = url.split("/")[0];
     return `http://carbonneutralwebsite.org/api/banner/${domain}/${displayValue(footPrint.impactInCarbon.firstVisit, "g").replace(" ", "")}/${style ? style : "light"}.svg`;
   }

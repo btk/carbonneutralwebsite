@@ -69,6 +69,14 @@ export default function Home() {
             <img src="http://carbonneutralwebsite.org/api/banner/atauni.edu.tr/436.57mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
           </a>
 
+          <a href="https://www.500px.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/www.500px.com/589.11mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://stackoverflow.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/stackoverflow.com/50.89mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
         </div>
 
         <p style={{fontSize: 19, marginTop: 5}}>Would you like us to add your website here? <b><a href="mailto:info@buraktokak.com">Contact Us.</a></b></p>
