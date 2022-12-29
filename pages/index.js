@@ -49,10 +49,14 @@ export default function Home() {
           <Container sm gap={0}>
             <Spacer y={1} />
             <img src="/illustrations/illustration1.svg" width={300} alt="il1"/>
+            <div/>
             <img src="/illustrations/illustration2.svg" width={300} alt="il2"/>
+            <div/>
             <img src="/illustrations/illustration3.svg" width={300} alt="il3"/>
+            <div/>
             <img src="/illustrations/illustration4.svg" width={300} alt="il4"/>
           </Container>
+          <img src="/tres.png" style={{width: 120, display: "block", margin: "auto", paddingTop: 20}} alt="action trees"/>
 
         </div>
       </div>

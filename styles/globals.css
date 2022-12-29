@@ -197,7 +197,7 @@ a {
 
 .resultCol {
   cursor: pointer;
-  background: #f9f9f6;
+  background: #f7f7f4;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -207,7 +207,7 @@ a {
   border-radius: 20px;
   transition: 200ms background;
   box-sizing: border-box;
-  border: 2px solid #f9f9f6;
+  border: 2px solid #f7f7f4;
   border-bottom-width: 5px;
   position: relative;
   z-index: 99;

@@ -15,8 +15,11 @@ function Header(){
           <Spacer y={0.5} />
           <Logo size={90} />
           <p style={{color: "#333"}}>Carbon Neutral Website is a carbon emission calculator that will take into account the power consumption of the devices used to access web pages and web servers, as well as the carbon footprint of the internet infrastructure. This calculator will also tell you the amount of trees you should plant to offset your website&#39;s carbon footprint.</p>
-          <img src="/tres.png" style={{width: 120, display: "block", margin: "auto", paddingTop: 20}} alt="action trees"/>
-          <p style={{color: "#666", textAlign: "center", paddingBottom: 20, fontWeight: "500"}}>&copy; 2022 &middot; Dream Oriented Limited</p>
+
+          <a href="https://carbonneutralwebsite.org/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/carbonneutralwebsite.org/36.57mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+          <p style={{color: "#666", textAlign: "center", paddingBottom: 20, fontWeight: "500"}}>&copy; 2022 &middot; Carbon Neutral Website</p>
         </div>
       </div>
     </>

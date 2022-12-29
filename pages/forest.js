@@ -37,6 +37,10 @@ export default function Home() {
 
 
         <div className="forest" style={{marginTop: 20}}>
+          <a href="https://carbonneutralwebsite.org/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/carbonneutralwebsite.org/36.57mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+          
           <a href="https://buraktokak.com/" target="_blank" rel="noreferrer">
             <img src="http://carbonneutralwebsite.org/api/banner/buraktokak.com/36.86mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
           </a>
@@ -111,7 +115,7 @@ export default function Home() {
 
         </div>
 
-        <p style={{fontSize: 19, marginTop: 5}}>Would you like us to add your website here? <b><a href="mailto:info@buraktokak.com">Contact Us.</a></b></p>
+        <p style={{fontSize: 19, paddingTop: 20, textAlign: "center"}}>Would you like us to add your website here? <b><a href="mailto:info@buraktokak.com">Contact Us.</a></b></p>
       </Container>
       <Footer/>
     </div>
