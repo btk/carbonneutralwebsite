@@ -37,20 +37,13 @@ export default function Home() {
 
 
         <div className="forest" style={{marginTop: 20}}>
-          <a href="https://carbonneutralwebsite.org/" target="_blank" rel="noreferrer">
-            <img src="http://carbonneutralwebsite.org/api/banner/carbonneutralwebsite.org/36.57mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
-          </a>
-          
-          <a href="https://buraktokak.com/" target="_blank" rel="noreferrer">
-            <img src="http://carbonneutralwebsite.org/api/banner/buraktokak.com/36.86mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+
+          <a href="https://wikipedia.org/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/wikipedia.org/8.04mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
           </a>
 
           <a href="https://apple.com/" target="_blank" rel="noreferrer">
             <img src="http://carbonneutralwebsite.org/api/banner/apple.com/1.24g/light.svg" width="300px"  alt="Carbon impact of this web page" />
-          </a>
-
-          <a href="https://svgrepo.com/" target="_blank" rel="noreferrer">
-            <img src="http://carbonneutralwebsite.org/api/banner/svgrepo.com/32.24mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
           </a>
 
           <a href="https://www.google.com/" target="_blank" rel="noreferrer">
@@ -77,10 +70,6 @@ export default function Home() {
             <img src="http://carbonneutralwebsite.org/api/banner/stackoverflow.com/50.89mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
           </a>
 
-          <a href="https://wikipedia.org/" target="_blank" rel="noreferrer">
-            <img src="http://carbonneutralwebsite.org/api/banner/wikipedia.org/8.04mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
-          </a>
-
           <a href="https://twitter.com/" target="_blank" rel="noreferrer">
             <img src="http://carbonneutralwebsite.org/api/banner/twitter.com/209.96mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
           </a>
@@ -91,6 +80,14 @@ export default function Home() {
 
           <a href="https://youtube.com/" target="_blank" rel="noreferrer">
             <img src="http://carbonneutralwebsite.org/api/banner/youtube.com/93.17mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://microsoft.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/microsoft.com/115.56mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://airbnb.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/airbnb.com/212.74mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
           </a>
 
           <a href="https://metu.edu.tr/" target="_blank" rel="noreferrer">
@@ -113,6 +110,17 @@ export default function Home() {
             <img src="http://carbonneutralwebsite.org/api/banner/atauni.edu.tr/436.57mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
           </a>
 
+          <a href="https://carbonneutralwebsite.org/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/carbonneutralwebsite.org/36.57mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://buraktokak.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/buraktokak.com/36.86mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://svgrepo.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/svgrepo.com/32.24mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
         </div>
 
         <p style={{fontSize: 19, paddingTop: 20, textAlign: "center"}}>Would you like us to add your website here? <b><a href="mailto:info@buraktokak.com">Contact Us.</a></b></p>
