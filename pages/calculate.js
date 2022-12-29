@@ -219,20 +219,27 @@ ${text} for webpage ${url}.
               <h3 href="#results">Results</h3>
 
               <div style={{display: "flex", flexDirection: "row", width: "100%"}}>
-                <div className="resultCol" onClick={() => copyText(`Total Carbon Impact is ${displayValue(footPrint.totalImpactInCarbon * intensityFactorMultip, "g")} Per Year`)}>
+                <div className="resultCol">
                   <h4>Total Carbon Impact</h4>
                   <p>{displayValue(footPrint.totalImpactInCarbon * intensityFactorMultip, "g")}</p>
                   <span>Per Year</span>
+                  <div className="copyButton" onClick={() => copyText(`Total Carbon Impact is ${displayValue(footPrint.totalImpactInCarbon * intensityFactorMultip, "g")} Per Year`)}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="square" stroke-linejoin="arcs"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </div>
                 </div>
 
-                <div className="resultCol" onClick={() => copyText(`Performance Metric Score is ${results.score} Out of 100`)}>
+                <div className="resultCol">
                   <h4>Performance Metric Score</h4>
                   <div style={{display: "flex", flexDirection: "row"}}><p>{results.score}</p> {renderStatus100(results.score)}</div>
                   <span>Out of 100</span>
+
+                  <div className="copyButton" onClick={() => copyText(`Performance Metric Score is ${results.score} Out of 100`)}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="square" stroke-linejoin="arcs"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </div>
                 </div>
               </div>
 
-              <div className="resultCol" style={{marginRight: 0}} onClick={() => copyText(`Server Location is ${hostData.city}, ${hostData.country} ${hostData.isp}`)}>
+              <div className="resultCol" style={{marginRight: 0}}>
                 {hostData != null &&
                   <div>
                     <h4>Server Location</h4>
@@ -240,48 +247,76 @@ ${text} for webpage ${url}.
                     <span>ISP: {hostData.isp}</span>
                   </div>
                 }
+
+                <div className="copyButton" onClick={() => copyText(`Server Location is ${hostData.city}, ${hostData.country} ${hostData.isp}`)}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="square" stroke-linejoin="arcs"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </div>
               </div>
 
 
               <div style={{display: "flex", flexDirection: "row", width: "100%"}}>
-                <div className="resultCol" onClick={() => copyText(`First Visit Load Size is ${displayValue(footPrint.sizeInKb.firstVisit * 1000, "B")} Per page load`)}>
+                <div className="resultCol">
                   <h4>First Visit Load Size</h4>
                   <p>{displayValue(footPrint.sizeInKb.firstVisit * 1000, "B")}</p>
                   <span>Per page load</span>
+
+                  <div className="copyButton" onClick={() => copyText(`First Visit Load Size is ${displayValue(footPrint.sizeInKb.firstVisit * 1000, "B")} Per page load`)}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="square" stroke-linejoin="arcs"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </div>
                 </div>
 
-                <div className="resultCol" onClick={() => copyText(`Returning Visit Load Size is ${displayValue(footPrint.sizeInKb.returningVisit * 1000, "B")} Per page load`)}>
+                <div className="resultCol">
                   <h4>Returning Visit Load Size</h4>
                   <p>{displayValue(footPrint.sizeInKb.returningVisit * 1000, "B")}</p>
                   <span>Per page load</span>
+
+                  <div className="copyButton" onClick={() => copyText(`Returning Visit Load Size is ${displayValue(footPrint.sizeInKb.returningVisit * 1000, "B")} Per page load`)}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="square" stroke-linejoin="arcs"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </div>
                 </div>
               </div>
 
               <div style={{display: "flex", flexDirection: "row", width: "100%"}}>
-                <div className="resultCol" onClick={() => copyText(`First Visit Carbon Emission is ${displayValue(footPrint.impactInCarbon.firstVisit, "g")} Per page load`)}>
+                <div className="resultCol">
                   <h4>First Visit Carbon Emission</h4>
                   <p>{displayValue(footPrint.impactInCarbon.firstVisit, "g")}</p>
                   <span>Per page load</span>
+
+                  <div className="copyButton" onClick={() => copyText(`First Visit Carbon Emission is ${displayValue(footPrint.impactInCarbon.firstVisit, "g")} Per page load`)}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="square" stroke-linejoin="arcs"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </div>
                 </div>
 
-                <div className="resultCol" onClick={() => copyText(`Returning Visit Carbon Emission is ${displayValue(footPrint.impactInCarbon.returningVisit, "g")} Per page load`)}>
+                <div className="resultCol">
                   <h4>Returning Visit Carbon Emission</h4>
                   <p>{displayValue(footPrint.impactInCarbon.returningVisit, "g")}</p>
                   <span>Per page load</span>
+
+                  <div className="copyButton" onClick={() => copyText(`Returning Visit Carbon Emission is ${displayValue(footPrint.impactInCarbon.returningVisit, "g")} Per page load`)}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="square" stroke-linejoin="arcs"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </div>
                 </div>
               </div>
 
-              <div className="resultCol" style={{marginRight: 0}} onClick={() => copyText(`Largest Contentful Paint is ${lcpTime}`)}>
+              <div className="resultCol" style={{marginRight: 0}}>
                 <h4>Largest Contentful Paint</h4>
                 <p>{lcpTime}</p>
                 <span>Avg {AVG_LCP_TIME}s</span>
+
+                <div className="copyButton" onClick={() => copyText(`Largest Contentful Paint is ${lcpTime}`)}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="square" stroke-linejoin="arcs"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </div>
               </div>
 
 
-              <div className="resultCol resultTree" onClick={() => copyText(`Trees to Offset Carbon Emission is ${Math.ceil(footPrint.treeToOffset)} Trees Per Year`)}>
+              <div className="resultCol resultTree">
                 <h4>Trees to Offset Carbon Emission</h4>
                 <p>{Math.ceil(footPrint.treeToOffset)} Trees</p>
                 <span>Per Year</span>
+
+                <div className="copyButton" onClick={() => copyText(`Trees to Offset Carbon Emission is ${Math.ceil(footPrint.treeToOffset)} Trees Per Year`)}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="square" stroke-linejoin="arcs"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </div>
               </div>
 
               {results &&

@@ -288,6 +288,28 @@ a {
   margin-left: 40px;
 }
 
+.copyButton {
+  position: absolute;
+  padding: 10px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  right: 10px;
+  top: 10px;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: 200ms all;
+  border: 1px solid transparent;
+
+}
+
+.copyButton:hover {
+  border: 1px solid #6dbf36;
+  background: #fff;
+}
+
+.resultCol:hover .copyButton {
+  opacity: 1;
+}
 
 @media only screen and (max-width: 700px) {
 
