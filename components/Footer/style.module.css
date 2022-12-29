@@ -7,14 +7,35 @@
 
 .footerInner {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  padding-top: 15px;
 }
 
 .footer p {
   padding: 8px;
   font-size: 16px;
-  max-width: 900px;
-  text-align: center;
+  max-width: 700px;
+}
+
+
+@media only screen and (max-width: 700px) {
+
+  .footerInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+  }
+
+  .footerInner img {
+    display: block;
+    margin: auto;
+  }
+
+  .footerInner p {
+    text-align: center;
+  }
 }

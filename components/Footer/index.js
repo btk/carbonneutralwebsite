@@ -10,17 +10,22 @@ function Header(){
   return(
     <>
       <div className={styles.footer}>
-        <div className={styles.footerInner}>
-          <Spacer y={0.1} />
-          <Spacer y={0.5} />
-          <Logo size={90} />
-          <p style={{color: "#333"}}>Carbon Neutral Website is a carbon emission calculator that will take into account the power consumption of the devices used to access web pages and web servers, as well as the carbon footprint of the internet infrastructure. This calculator will also tell you the amount of trees you should plant to offset your website&#39;s carbon footprint.</p>
-
-          <a href="https://carbonneutralwebsite.org/" target="_blank" rel="noreferrer">
-            <img src="http://carbonneutralwebsite.org/api/banner/carbonneutralwebsite.org/36.57mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
-          </a>
-          <p style={{color: "#666", textAlign: "center", paddingBottom: 20, fontWeight: "500"}}>&copy; 2022 &middot; Carbon Neutral Website</p>
-        </div>
+        <Container sm gap={0}>
+          <div className={styles.footerInner}>
+            <div>
+              <Link href="/">
+                <Logo size={90} />
+              </Link>
+              <p style={{color: "#333"}}>Carbon Neutral Website is a carbon emission calculator that takes into account the power consumption of device and server during browsing a web page.</p>
+              <p style={{color: "#666", paddingBottom: 20, fontWeight: "600"}}>&copy; 2022 &middot; Carbon Neutral Website</p>
+            </div>
+            <div>
+            <a href="https://carbonneutralwebsite.org/" target="_blank" rel="noreferrer">
+              <img src="http://carbonneutralwebsite.org/api/banner/carbonneutralwebsite.org/36.57mg/light.svg" width="300px"  alt="Carbon impact of this web page" style={{marginBottom: 15}}/>
+            </a>
+            </div>
+          </div>
+        </Container>
       </div>
     </>
   );
