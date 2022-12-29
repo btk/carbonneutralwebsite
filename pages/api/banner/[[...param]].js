@@ -12,15 +12,13 @@ export default async function handler(req, res) {
       "Content-Type": "image/svg+xml",
     });
 
-    const response = await fetch(`http://localhost:3000/banner_${style}.svg`);
+    const response = await fetch(`https://carbonneutralwebsite.org/banner_${style}.svg`);
     let body = await response.text();
 
     let svg = body;
 
     svg = svg.replace(new RegExp(`\\$domain`,"g"), url);
     svg = svg.replace(new RegExp(`\\$co2g`,"g"), carbon);
-
-    console.log(svg);
 
     res.write(svg)
     res.end()

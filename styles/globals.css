@@ -299,7 +299,7 @@ a {
   cursor: pointer;
   transition: 200ms all;
   border: 1px solid transparent;
-
+  z-index: 5;
 }
 
 .copyButton:hover {
@@ -309,6 +309,22 @@ a {
 
 .resultCol:hover .copyButton {
   opacity: 1;
+}
+
+.bannerCode {
+  padding-top: 30px;
+}
+
+.bannerCode textarea {
+  width: 100%;
+  border: 1px solid #eee;
+  padding: 15px;
+  font-size: 14px;
+  height: 70px;
+}
+
+.textareaHolder {
+  position: relative;
 }
 
 @media only screen and (max-width: 700px) {
