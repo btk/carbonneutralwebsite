@@ -320,11 +320,34 @@ a {
   border: 1px solid #eee;
   padding: 15px;
   font-size: 13px;
-  height: 90px;
+  height: 110px;
 }
 
 .textareaHolder {
   position: relative;
+}
+
+.selection, .selectionActive {
+  border: 1px solid #eee;
+  padding: 10px 20px;
+  margin-right: 5px;
+  border-radius: 10px 10px 0px 0px;
+  cursor: pointer;
+  border-bottom: 0px;
+  font-size: 15px;
+  background: #fafafa;
+}
+
+.selectionActive {
+  background: #fff;
+  font-weight: bold;
+  border-bottom: 0px;
+}
+
+.selection:hover, .selectionActive:hover {
+  border: 1px solid #ddd;
+  background: #eee;
+  border-bottom: 0px;
 }
 
 @media only screen and (max-width: 700px) {
