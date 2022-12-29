@@ -196,6 +196,7 @@ a {
 }
 
 .resultCol {
+  cursor: pointer;
   background: #f9f9f6;
   display: flex;
   flex: 1;
@@ -204,10 +205,27 @@ a {
   margin-bottom: 10px;
   margin-right: 10px;
   border-radius: 20px;
+  transition: 200ms background;
+  box-sizing: border-box;
+  border: 2px solid #f9f9f6;
+  border-bottom-width: 5px;
+  position: relative;
+  z-index: 99;
+}
+
+.resultCol:hover {
+  background: #dbecdf;
+  border: 2px solid #95d5a4;
+  border-bottom-width: 5px;
 }
 
 .resultCol:last-of-type {
   margin-right: 0px;
+}
+
+.resultCol p {
+  font-size: 24px;
+  font-family: monospace;
 }
 
 .resultTree {
@@ -219,7 +237,18 @@ a {
   background-repeat: repeat-x;
   background-size: 600px;
   background-position: bottom center;
+  border: 2px solid #dbecdf;
   border-bottom: 5px solid #dbecdf;
+  transition: 200ms all;
+}
+
+.resultTree:hover {
+  background-color: #dbecdf;
+  background-image: url("/tree-pattern.png");
+  background-repeat: repeat-x;
+  background-size: 600px;
+  background-position: bottom center;
+  border-bottom: 5px solid #95d5a4;
 }
 
 .resultCol h4 {

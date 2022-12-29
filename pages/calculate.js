@@ -40,6 +40,27 @@ export default function Home() {
   const [lcpMultip, setLcpMultip] = useState(1);
   const [lcpTime, setLcpTime] = useState(AVG_LCP_TIME);
 
+  useEffect(() => {
+    if(results.score){
+      console.log("pv changed to", pageView, ratio);
+      softCalculate();
+    }
+  }, [pageView, ratio])
+
+  let softCalculate = async () => {
+    setCalculating(true);
+    let calculation = results;
+    let pageSizeInKb = calculatePageSize(calculation.audits["network-requests"].details.items);
+    setPageSize(pageSizeInKb);
+
+    setLcpMultip(calculation.audits["largest-contentful-paint"].score)
+    setLcpTime(calculation.audits["largest-contentful-paint"].displayValue);
+
+    let calculatedFootPrint = calculateCarbonFootPrint(pageSizeInKb, calculation.score);
+    setFootPrint(calculatedFootPrint);
+    setCalculating(false);
+  }
+
   let calculate = async () => {
     setCalculating(true);
     setHostData(null);
@@ -127,6 +148,24 @@ export default function Home() {
     }
   }
 
+  let renderStatus100 = (score) => {
+    if(score == 100){
+      return <span className="indicator" style={{ height: 28, position: "relative", top: 7, left: 7}}>Perfect</span>;
+    }else if(score > 50){
+      return <span className="indicator" style={{backgroundColor: "#9d8a04",  height: 28, position: "relative", top: 7, left: 7}}>Needs Work</span>;
+    }else{
+      return <span className="indicator" style={{backgroundColor: "#a51c1c",  height: 28, position: "relative", top: 7, left: 7}}>Poor</span>;
+    }
+  }
+
+  let copyText = (text) => {
+    navigator.clipboard.writeText(text + ` for webpage ${url}.`);
+    alert(`Text Copied!
+========
+${text} for webpage ${url}.
+      `);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -180,24 +219,24 @@ export default function Home() {
               <h3 href="#results">Results</h3>
 
               <div style={{display: "flex", flexDirection: "row", width: "100%"}}>
-                <div className="resultCol">
+                <div className="resultCol" onClick={() => copyText(`Total Carbon Impact is ${displayValue(footPrint.totalImpactInCarbon * intensityFactorMultip, "g")} Per Year`)}>
                   <h4>Total Carbon Impact</h4>
                   <p>{displayValue(footPrint.totalImpactInCarbon * intensityFactorMultip, "g")}</p>
                   <span>Per Year</span>
                 </div>
 
-                <div className="resultCol">
+                <div className="resultCol" onClick={() => copyText(`Performance Metric Score is ${results.score} Out of 100`)}>
                   <h4>Performance Metric Score</h4>
-                  <p>{results.score}</p>
+                  <div style={{display: "flex", flexDirection: "row"}}><p>{results.score}</p> {renderStatus100(results.score)}</div>
                   <span>Out of 100</span>
                 </div>
               </div>
 
-              <div className="resultCol" style={{marginRight: 0}}>
+              <div className="resultCol" style={{marginRight: 0}} onClick={() => copyText(`Server Location is ${hostData.city}, ${hostData.country} ${hostData.isp}`)}>
                 {hostData != null &&
                   <div>
                     <h4>Server Location</h4>
-                    <p>{hostData.city} {hostData.country}, {hostData.countryCode} {hostData.countryCode != "US" && <b style={{textAlign: "right", width: "100%"}}>(x{displayValue(intensityFactorMultip, "")} more emission than US)</b>}</p>
+                    <p style={{fontSize: 20}}>{hostData.city} {hostData.country}, {hostData.countryCode} {hostData.countryCode != "US" && <b style={{textAlign: "right", width: "100%"}}>(x{displayValue(intensityFactorMultip, "")} more emission than US)</b>}</p>
                     <span>ISP: {hostData.isp}</span>
                   </div>
                 }
@@ -205,13 +244,13 @@ export default function Home() {
 
 
               <div style={{display: "flex", flexDirection: "row", width: "100%"}}>
-                <div className="resultCol">
+                <div className="resultCol" onClick={() => copyText(`First Visit Load Size is ${displayValue(footPrint.sizeInKb.firstVisit * 1000, "B")} Per page load`)}>
                   <h4>First Visit Load Size</h4>
                   <p>{displayValue(footPrint.sizeInKb.firstVisit * 1000, "B")}</p>
                   <span>Per page load</span>
                 </div>
 
-                <div className="resultCol">
+                <div className="resultCol" onClick={() => copyText(`Returning Visit Load Size is ${displayValue(footPrint.sizeInKb.returningVisit * 1000, "B")} Per page load`)}>
                   <h4>Returning Visit Load Size</h4>
                   <p>{displayValue(footPrint.sizeInKb.returningVisit * 1000, "B")}</p>
                   <span>Per page load</span>
@@ -219,30 +258,30 @@ export default function Home() {
               </div>
 
               <div style={{display: "flex", flexDirection: "row", width: "100%"}}>
-                <div className="resultCol">
+                <div className="resultCol" onClick={() => copyText(`First Visit Carbon Emission is ${displayValue(footPrint.impactInCarbon.firstVisit, "g")} Per page load`)}>
                   <h4>First Visit Carbon Emission</h4>
                   <p>{displayValue(footPrint.impactInCarbon.firstVisit, "g")}</p>
                   <span>Per page load</span>
                 </div>
 
-                <div className="resultCol">
+                <div className="resultCol" onClick={() => copyText(`Returning Visit Carbon Emission is ${displayValue(footPrint.impactInCarbon.returningVisit, "g")} Per page load`)}>
                   <h4>Returning Visit Carbon Emission</h4>
                   <p>{displayValue(footPrint.impactInCarbon.returningVisit, "g")}</p>
                   <span>Per page load</span>
                 </div>
               </div>
 
-              <div className="resultCol" style={{marginRight: 0}}>
+              <div className="resultCol" style={{marginRight: 0}} onClick={() => copyText(`Largest Contentful Paint is ${lcpTime}`)}>
                 <h4>Largest Contentful Paint</h4>
                 <p>{lcpTime}</p>
                 <span>Avg {AVG_LCP_TIME}s</span>
               </div>
 
 
-              <div className="resultCol resultTree">
+              <div className="resultCol resultTree" onClick={() => copyText(`Trees to Offset Carbon Emission is ${Math.ceil(footPrint.treeToOffset)} Trees Per Year`)}>
                 <h4>Trees to Offset Carbon Emission</h4>
                 <p>{Math.ceil(footPrint.treeToOffset)} Trees</p>
-                <span>&nbsp;</span>
+                <span>Per Year</span>
               </div>
 
               {results &&
@@ -269,7 +308,6 @@ export default function Home() {
                   </Collapse.Group>
                 </div>
               }
-
             </div>
             <div className="resultsRight" style={{paddingTop: 40}}>
               {results.audits &&
@@ -281,6 +319,16 @@ export default function Home() {
             </div>
           </div>
         }
+
+        {results &&
+          <a href="https://github.com/btk/carbonneutralwebsite/issues/new">
+            <div className="resultCol">
+              <h4>Do you have feedback?</h4>
+              <span>This project is still in beta stage. You can give feedback and detail your problems by creating a new issue in this Github repository.</span>
+            </div>
+          </a>
+        }
+
       </Container>
       <Footer/>
     </div>
