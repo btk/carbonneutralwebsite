@@ -173,7 +173,8 @@ ${text} for webpage ${url}.
   }
 
   let getBannerCode = (style, size) => {
-    return `<a href="https://carbonneutralwebsite.org/" target="_blank" rel="noreferrer"><img src="${getBannerURL(style)}" width="${size ? size : "300px"}"  alt="Carbon impact of this web page" /></a>`;
+    return `<!-- Carbon Neutral Website Banner (${style}) -->
+<a href="https://carbonneutralwebsite.org/" target="_blank" rel="noreferrer"><img src="${getBannerURL(style)}" width="${size ? size : "300px"}"  alt="Carbon impact of this web page" /></a>`;
   }
 
   return (
@@ -358,10 +359,14 @@ ${text} for webpage ${url}.
                 <h4>Fancy a banner for your page?</h4>
                 <span>Put your calculation results on your web page and show your users their carbon impact.</span>
 
-                <div className="button" onPress={() => setBannerStyle("light")}>Light</div>
-                <div className="button" onPress={() => setBannerStyle("dark")}>Dark</div>
+                <div style={{height: 20}}/>
                 <img src={getBannerURL(bannerStyle)} alt={"banner demo"} width={300}/>
+                <div style={{height: 10}}/>
 
+                <div style={{display: "flex", flexDirection: "row"}}>
+                  <div className={bannerStyle == "light" ? "selectionActive": "selection"} onClick={() => setBannerStyle("light")}>Light Banner</div>
+                  <div className={bannerStyle == "dark" ? "selectionActive": "selection"} onClick={() => setBannerStyle("dark")}>Dark Banner</div>
+                </div>
                 <div className="textareaHolder">
                   <div className="copyButton" style={{backgroundColor: "#eee", opacity: 1}} onClick={() => copyText(getBannerCode(bannerStyle))}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="square" stroke-linejoin="arcs"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
@@ -369,6 +374,8 @@ ${text} for webpage ${url}.
                   </div>
                   <textarea style={{fontFamily: "monospace"}} value={getBannerCode(bannerStyle)}/>
                 </div>
+                <div style={{height: 10}}/>
+
               </div>
 
 
@@ -378,6 +385,7 @@ ${text} for webpage ${url}.
                 <div style={{position: "sticky", top: 50}}>
                   <img src={"/mobile.svg"} width={200} style={{position: "absolute", top: 80, transform: "scaleX(2.23) scaleY(2.15)"}} />
                   <img src={results.audits["final-screenshot"].details.data} width={200}/>
+                  <div style={{height: 50}}></div>
                 </div>
               }
             </div>
