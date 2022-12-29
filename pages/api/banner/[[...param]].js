@@ -4,15 +4,15 @@ export default async function handler(req, res) {
     method
   } = req
 
-  let [url, carbon] = param;
-    carbon = carbon.replace(".svg", "");
+  let [url, carbon, style] = param;
+    style = style.replace(".svg", "");
 
     res.setHeader('Cache-Control', `s-maxage=${60 * 60 * 24 * 30}, stale-while-revalidate`);
     res.writeHead(200, {
       "Content-Type": "image/svg+xml",
     });
 
-    const response = await fetch(`http://localhost:3000/banner.svg`);
+    const response = await fetch(`http://localhost:3000/banner_${style}.svg`);
     let body = await response.text();
 
     let svg = body;

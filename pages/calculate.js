@@ -212,6 +212,8 @@ ${text} for webpage ${url}.
           </div>
         }
 
+        <img src="http://localhost:3000/api/banner/www.svgrepo.com/10.3g/light.svg" width={200}/>
+        <img src="http://localhost:3000/api/banner/www.svgrepo.com/10.3g/dark.svg" width={200}/>
 
         {footPrint.impactInCarbon &&
           <div className="results">
