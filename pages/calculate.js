@@ -39,6 +39,7 @@ export default function Home() {
   const [intensityFactorMultip, setIntensityFactorMultip] = useState(1);
   const [lcpMultip, setLcpMultip] = useState(1);
   const [lcpTime, setLcpTime] = useState(AVG_LCP_TIME);
+  const [bannerStyle, setBannerStyle] = useState("light");
 
   useEffect(() => {
     if(results.score){
@@ -164,6 +165,15 @@ export default function Home() {
 ========
 ${text} for webpage ${url}.
       `);
+  }
+
+  let getBannerURL = (style) => {
+    let domain = url.split("/")[0];
+    return `http://carbonneutralwebsite.org/api/banner/${domain}/${displayValue(footPrint.impactInCarbon.firstVisit, "g").replace(" ", "")}/${style ? style : "light"}.svg`;
+  }
+
+  let getBannerCode = (style, size) => {
+    return `<a href="https://carbonneutralwebsite.org/" target="_blank" rel="noreferrer"><img src="${getBannerURL(style)}" width="${size ? size : "300px"}"  alt="Carbon impact of this web page" /></a>`;
   }
 
   return (
@@ -348,16 +358,16 @@ ${text} for webpage ${url}.
                 <h4>Fancy a banner for your page?</h4>
                 <span>Put your calculation results on your web page and show your users their carbon impact.</span>
 
-                <div className="button">Light</div>
-                <div className="button">Dark</div>
-                <img src="http://carbonneutralwebsite.org/api/banner/www.svgrepo.com/10.3g/light.svg" width={300}/>
-                <img src="http://carbonneutralwebsite.org/api/banner/www.svgrepo.com/10.3g/dark.svg" width={300}/>
+                <div className="button" onPress={() => setBannerStyle("light")}>Light</div>
+                <div className="button" onPress={() => setBannerStyle("dark")}>Dark</div>
+                <img src={getBannerURL(bannerStyle)} alt={"banner demo"} width={300}/>
 
                 <div className="textareaHolder">
-                  <div className="copyButton" style={{backgroundColor: "#eee", opacity: 1}} onClick={() => copyText(`<img src="http://carbonneutralwebsite.org/api/banner/www.svgrepo.com/10.3g/light.svg" width={300}/>`)}>
+                  <div className="copyButton" style={{backgroundColor: "#eee", opacity: 1}} onClick={() => copyText(getBannerCode(bannerStyle))}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="square" stroke-linejoin="arcs"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span style={{marginLeft: 5, fontSize: 13, position: "relative", bottom: 3 }}>Copy Code</span>
                   </div>
-                  <textarea style={{fontFamily: "monospace"}} value={`<img src="http://carbonneutralwebsite.org/api/banner/www.svgrepo.com/10.3g/light.svg" width={300}/>`}/>
+                  <textarea style={{fontFamily: "monospace"}} value={getBannerCode(bannerStyle)}/>
                 </div>
               </div>
 
