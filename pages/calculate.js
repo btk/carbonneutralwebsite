@@ -168,6 +168,7 @@ ${text} for webpage ${url}.
   }
 
   let getBannerURL = (style) => {
+    console.log(url);
     let domain = url.split("/")[0];
     return `http://carbonneutralwebsite.org/api/banner/${domain}/${displayValue(footPrint.impactInCarbon.firstVisit, "g").replace(" ", "")}/${style ? style : "light"}.svg`;
   }
@@ -188,7 +189,7 @@ ${text} for webpage ${url}.
       <Header/>
       <Container sm>
         <div className="calculatorHolder">
-          <Input labelLeft="https://" size="lg" label="Page URL" placeholder="www.site.com" type="text" onChange={(e) => setUrl(e.target.value)} className="calculatorURL"/>
+          <Input labelLeft="https://" size="lg" label="Page URL" placeholder="www.site.com" type="text" value={url} onChange={(e) => setUrl(e.target.value.replace("https://", "").replace("http://", ""))} className="calculatorURL"/>
           <div style={{width: 20, height: 20}}></div>
           <Input size="lg" label="Monthly Pageviews" placeholder="10000" type="number" value={pageView} onChange={(e) => setPageView(e.target.value)} style={{minWidth: 140}}/>
           <div style={{width: 20, height: 20}}></div>
