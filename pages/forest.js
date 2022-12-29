@@ -33,9 +33,45 @@ export default function Home() {
         <Spacer/>
         <Spacer/>
         <h1 style={{fontSize: 32}}>Virtual Forest</h1>
-        <p style={{fontSize: 19}}>Browse websites calculation results with good ratings, learn from the best approaches listed on the Carbon Neutral Website.</p>
+        <p style={{fontSize: 19}}>Browse websites calculation results of few websites, feel free to visit these websites and compare the emission amount and data they serve.</p>
 
-        <div className="resultCol" style={{height: 400, marginTop: 20}}></div>
+
+        <div className="forest" style={{marginTop: 20}}>
+          <a href="https://buraktokak.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/buraktokak.com/36.86mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://apple.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/apple.com/1.24g/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://svgrepo.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/svgrepo.com/32.24mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://metu.edu.tr/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/metu.edu.tr/500.46mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://hacettepe.edu.tr/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/hacettepe.edu.tr/1.33g/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://ankara.edu.tr/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/ankara.edu.tr/132.49mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://gazi.edu.tr/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/gazi.edu.tr/346.96mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://atauni.edu.tr/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/atauni.edu.tr/436.57mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+        </div>
+
+        <p style={{fontSize: 19, marginTop: 5}}>Would you like us to add your website here? <b><a href="mailto:info@buraktokak.com">Contact Us.</a></b></p>
       </Container>
       <Footer/>
     </div>

@@ -350,6 +350,11 @@ a {
   border-bottom: 0px;
 }
 
+.forest img {
+  margin-right: 10px;
+  width: 290px;
+}
+
 @media only screen and (max-width: 700px) {
 
   .results {
