@@ -49,6 +49,46 @@ export default function Home() {
             <img src="http://carbonneutralwebsite.org/api/banner/svgrepo.com/32.24mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
           </a>
 
+          <a href="https://www.google.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/google.com/85.29mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/facebook.com/35.55mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://baidu.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/facebook.com/83.28mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://www.500px.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/www.500px.com/589.11mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/instagram.com/141.53mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://stackoverflow.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/stackoverflow.com/50.89mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://wikipedia.org/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/wikipedia.org/8.04mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://twitter.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/twitter.com/209.96mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://medium.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/medium.com/99.91mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
+          <a href="https://youtube.com/" target="_blank" rel="noreferrer">
+            <img src="http://carbonneutralwebsite.org/api/banner/youtube.com/93.17mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
+          </a>
+
           <a href="https://metu.edu.tr/" target="_blank" rel="noreferrer">
             <img src="http://carbonneutralwebsite.org/api/banner/metu.edu.tr/500.46mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
           </a>
@@ -67,14 +107,6 @@ export default function Home() {
 
           <a href="https://atauni.edu.tr/" target="_blank" rel="noreferrer">
             <img src="http://carbonneutralwebsite.org/api/banner/atauni.edu.tr/436.57mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
-          </a>
-
-          <a href="https://www.500px.com/" target="_blank" rel="noreferrer">
-            <img src="http://carbonneutralwebsite.org/api/banner/www.500px.com/589.11mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
-          </a>
-
-          <a href="https://stackoverflow.com/" target="_blank" rel="noreferrer">
-            <img src="http://carbonneutralwebsite.org/api/banner/stackoverflow.com/50.89mg/light.svg" width="300px"  alt="Carbon impact of this web page" />
           </a>
 
         </div>

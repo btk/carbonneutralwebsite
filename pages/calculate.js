@@ -150,7 +150,7 @@ export default function Home() {
   }
 
   let renderStatus100 = (score) => {
-    if(score == 100){
+    if(score > 95){
       return <span className="indicator" style={{ height: 28, position: "relative", top: 7, left: 7}}>Perfect</span>;
     }else if(score > 50){
       return <span className="indicator" style={{backgroundColor: "#9d8a04",  height: 28, position: "relative", top: 7, left: 7}}>Needs Work</span>;
