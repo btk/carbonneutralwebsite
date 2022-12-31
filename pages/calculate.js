@@ -393,7 +393,7 @@ ${text} for webpage ${url}.
         }
 
         {results &&
-          <a href="https://github.com/btk/carbonneutralwebsite/issues/new">
+          <a href="https://github.com/btk/carbonneutralwebsite/issues/new" target="_blank" rel="noreferrer">
             <div className="resultCol">
               <h4>Do you have feedback?</h4>
               <span>This project is still in beta stage. You can give feedback and detail your problems by creating a new issue in this Github repository.</span>

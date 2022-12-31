@@ -6,7 +6,7 @@ function Logo({size}){
 
   return(
     <Collapse.Group>
-      <Collapse title="How does it work?">
+      <Collapse title="About Calculator Tool">
         <Text>
           The user inputs their domain name into the calculator and the web application will generate a report on the carbon emission of the website depending on the data transfer size and website efficiency. The report will include a set of recommendations on how to reduce the carbon footprint of the website.This calculator will also tell you the amount of trees you should plant to offset your website&apos;s carbon footprint.
         </Text>

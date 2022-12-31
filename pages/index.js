@@ -21,7 +21,7 @@ export default function Home() {
         <meta name="description" content="Carbon Neutral Website is a carbon emission calculator that takes into account the power consumption of device and server during browsing a web page." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Header/>
       <div className={styles.hero}>
 
         <div className={styles.heroContent}>
@@ -64,15 +64,16 @@ export default function Home() {
       <Container sm gap={0}>
         <Spacer y={1} />
         <Accordion />
+        <Spacer y={1} />
 
-                {true &&
-                  <a href="https://github.com/btk/carbonneutralwebsite/issues/new">
-                    <div className="resultCol">
-                      <h3>Do you have feedback?</h3>
-                      <span>This project is still in beta stage. You can give feedback and detail your problems by creating a new issue in this Github repository.</span>
-                    </div>
-                  </a>
-                }
+        {true &&
+          <a href="https://github.com/btk/carbonneutralwebsite/issues/new" target="_blank" rel="noreferrer">
+            <div className="resultCol">
+              <h3>Do you have feedback?</h3>
+              <span>This project is still in beta stage. You can give feedback and detail your problems by creating a new issue in this Github repository.</span>
+            </div>
+          </a>
+        }
       </Container>
       <Footer/>
     </div>
