@@ -11,7 +11,7 @@ function Logo({size}){
           The user inputs their domain name into the calculator and the web application will generate a report on the carbon emission of the website depending on the data transfer size and website efficiency. The report will include a set of recommendations on how to reduce the carbon footprint of the website.This calculator will also tell you the amount of trees you should plant to offset your website&apos;s carbon footprint.
         </Text>
       </Collapse>
-      <Collapse title="Calculations">
+      <Collapse title="Calculation Details">
         <Text style={{marginBottom: 10}}>
         Depending on data from <a href="https://carbonfund.org/calculation-methods/" target="_blank" rel="noreferrer">CarbonFund</a> taking the average CO2 per kilowatt hour of <b>0.371 kg per kWh</b> (this value will be changed depending on the country of origin of the users and servers)
         </Text><Text style={{marginBottom: 10}}>
@@ -40,12 +40,22 @@ function Logo({size}){
         In conclusion, 0.371 * (98.1 / 1000000) = <b>0.002183706 g CO2 emitted per page load and browse</b>.
         </Text>
       </Collapse>
-      <Collapse title="Option C">
+      <Collapse title="Recommendation Details">
         <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+        The following is a list of some of the recommendations that the calculator offers.
+</Text><Text style={{marginBottom: 10}}>
+</Text><Text style={{marginBottom: 10}}>•	Optimize the total blocking time (TBT) of the web page by reducing the number of JavaScript and CSS files, and optimizing the size of these files.
+</Text><Text style={{marginBottom: 10}}>•	Reduce the amount of JavaScript code with minification and tree-shaking algorithms.
+</Text><Text style={{marginBottom: 10}}>•	Reduce the size of images used on the page.
+</Text><Text style={{marginBottom: 10}}>•	Optimize the largest contentful paint (LCP) of the web page by reducing the number of images and videos.
+</Text><Text style={{marginBottom: 10}}>•	Optimize the JavaScript execution time of the web page by reducing the size of the JavaScript code.
+</Text><Text style={{marginBottom: 10}}>•	Optimize the speed index (SI) of the web page by reducing the amount of JavaScript and CSS code.
+</Text><Text style={{marginBottom: 10}}>•	Reduce the cumulative layout shift (CLS) of the web page by optimizing the size of images and videos.
+</Text><Text style={{marginBottom: 10}}>•	Optimize the initial server response time of the web page by optimizing the server configuration.
+</Text><Text style={{marginBottom: 10}}>•	Implement lazy image loading on the web page to reduce the amount of data transferred.
+</Text><Text style={{marginBottom: 10}}>•	Implement text compression to reduce the amount of data transferred.
+</Text><Text style={{marginBottom: 10}}>•	Optimize the DOM size of the web page by optimizing the size of HTML, CSS, and JavaScript code.
+</Text><Text style={{marginBottom: 10}}>•	Avoid using document.write on the web page.
         </Text>
       </Collapse>
     </Collapse.Group>
