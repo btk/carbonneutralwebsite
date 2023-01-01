@@ -23,9 +23,6 @@
   margin-bottom: 30px;
 }
 
-.heroContent h2 {
-
-}
 
 .infoBox {
   border-radius: 12px;
@@ -62,6 +59,10 @@
 
   .infoBox {
     max-width: calc(100% - 20px);
+  }
+
+  .heroContent h2 {
+    font-size: 28px;
   }
 
   .heroContent {
