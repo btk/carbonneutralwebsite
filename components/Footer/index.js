@@ -21,7 +21,7 @@ function Header(){
             </div>
             <div>
             <a href="https://carbonneutralwebsite.org/" target="_blank" rel="noreferrer">
-              <Image src="/api/banner/carbonneutralwebsite.org/36.57mg/light.svg" width={300} height={120} alt="Carbon impact of this web page" style={{marginBottom: 15}}/>
+              <Image src="/api/banner/carbonneutralwebsite.org/30.5mg/light.svg" width={300} height={120} alt="Carbon impact of this web page" style={{marginBottom: 15}}/>
             </a>
             </div>
           </div>
