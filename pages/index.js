@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Logo from '../components/Logo'
 import Accordion from '../components/Accordion'
+import ScrollDown from '../components/ScrollDown'
 
 import post from '../js/post'
 import get from '../js/get'
@@ -21,45 +22,62 @@ export default function Home() {
         <meta name="description" content="Carbon Neutral Website is a carbon emission calculator that takes into account the power consumption of device and server during browsing a web page." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header/>
+      <Header noSpacing={true}/>
       <div className={styles.hero}>
+        <Container sm gap={0}>
+          <div className={styles.heroContent}>
+            <div>
+              <Text
+                h2
+                size={31}
+                weight="bold"
+              >
+                Calculate and Optimize
+              </Text>
+              <Text
+                h2
+                size={31}
+                weight="bold"
+                style={{position: "relative", bottom: 6}}
+              >
+                Web Page Carbon Footprint
+              </Text>
+              <Text size={18} style={{paddingBottom: 20, maxWidth: 500}}>A carbon emission calculator that takes into account the power consumption of device and server during browsing a web page.</Text>
+              <Link href="/calculate">
+                <Button size="lg" color="gradient"  css={{ $$primaryColor: "#330025" }} auto>Start Calculating</Button>
+              </Link>
+              <Text size={18} style={{paddingTop: 10, maxWidth: 500, opacity: 0.5}}>(100% free)</Text>
 
-        <div className={styles.heroContent}>
-        <Logo />
-          <>
-            <Text
-              h2
-              size={31}
-              weight="bold"
-            >
-              Calculate Your Website&apos;s
-            </Text>
-            <Text
-              h2
-              size={31}
-              weight="bold"
-            >
-              Carbon Footprint
-            </Text>
-          </>
-          <Link href="/calculate">
-            <Button size="lg" color="gradient"  css={{ $$primaryColor: "#330025" }} auto>Start Calculating</Button>
-          </Link>
+            </div>
+            <img src="/illustrations/illustration3.svg" width={300} style={{marginTop: 20, marginBottom: 20}} alt="il3"/>
 
-          <Container sm gap={0}>
-            <Spacer y={1} />
-            <img src="/illustrations/illustration1.svg" width={300} alt="il1"/>
-            <div/>
-            <img src="/illustrations/illustration2.svg" width={300} alt="il2"/>
-            <div/>
-            <img src="/illustrations/illustration3.svg" width={300} alt="il3"/>
-            <div/>
-            <img src="/illustrations/illustration4.svg" width={300} alt="il4"/>
-          </Container>
-          <img src="/tres.png" style={{width: 120, display: "block", margin: "auto", paddingTop: 20}} alt="action trees"/>
+          </div>
+        </Container>
 
-        </div>
       </div>
+
+      <ScrollDown/>
+
+      <Container sm gap={0}>
+          <Spacer y={3} />
+          <img src="/tres.png" style={{width: 120, display: "block", margin: "auto", paddingTop: 20}} alt="action trees"/>
+          <Text
+            h2
+            size={31}
+            weight="bold"
+            style={{textAlign: "center", marginTop: 20}}
+          >
+            How It Works?
+          </Text>
+        <img src="/illustrations/illustration1.svg" width={300} alt="il1"/>
+        <div/>
+        <img src="/illustrations/illustration2.svg" width={300} alt="il2"/>
+        <div/>
+        <img src="/illustrations/illustration3.svg" width={300} alt="il3"/>
+        <div/>
+        <img src="/illustrations/illustration4.svg" width={300} alt="il4"/>
+      </Container>
+
 
       <Container sm gap={0}>
         <Spacer y={1} />
