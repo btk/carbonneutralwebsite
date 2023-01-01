@@ -17,7 +17,7 @@ function Header(){
                 <Logo size={90} />
               </Link>
               <p style={{color: "#333"}}>Carbon Neutral Website is a carbon emission calculator that takes into account the power consumption of device and server during browsing a web page.</p>
-              <p style={{color: "#666", paddingBottom: 20, fontWeight: "600"}}>&copy; 2022 &middot; Carbon Neutral Website</p>
+              <p style={{color: "#666", paddingBottom: 20, fontWeight: "600"}}>&copy; 2023 &middot; Carbon Neutral Website</p>
             </div>
             <div>
             <a href="https://carbonneutralwebsite.org/" target="_blank" rel="noreferrer">

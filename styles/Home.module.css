@@ -27,7 +27,42 @@
 
 }
 
+.infoBox {
+  border-radius: 12px;
+  padding: 20px 25px;
+  max-width: 80%;
+  margin:auto;
+  margin-bottom: 15px;
+}
+
+.github {
+  border: 2px solid #101010;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding: 10px 0px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.github:hover {
+  background: #eee;
+}
+
+.github img {
+  margin-right: 5px;
+}
+
+
 @media (max-width: 600px) {
+
+  .infoBox {
+    max-width: calc(100% - 20px);
+  }
 
   .heroContent {
     display: flex;
