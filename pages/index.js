@@ -48,7 +48,7 @@ export default function Home() {
               </Link>
 
             </div>
-            <Image src="/illustrations/illustration3.svg" width={300} height={300} style={{marginTop: 20, marginBottom: 20}} alt="il3"/>
+            <Image src="/illustrations/illustration3.svg" width={320} height={320} style={{marginTop: 20, marginBottom: 20}} alt="il3"/>
 
           </div>
         </Container>
