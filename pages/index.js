@@ -48,7 +48,7 @@ export default function Home() {
               </Link>
 
             </div>
-            <img src="/illustrations/illustration3.svg" width={300} style={{marginTop: 20, marginBottom: 20}} alt="il3"/>
+            <Image src="/illustrations/illustration3.svg" width={300} height={300} style={{marginTop: 20, marginBottom: 20}} alt="il3"/>
 
           </div>
         </Container>
@@ -58,7 +58,7 @@ export default function Home() {
 
       <Container sm gap={0}>
           <Spacer y={3} />
-          <img src="/tres.png" style={{width: 120, display: "block", margin: "auto", paddingTop: 20}} alt="action trees"/>
+          <Image src="/tres.png" width={120} height={30} style={{ display: "block", margin: "auto", marginTop: 20}} alt="action trees"/>
           <Text
             h2
             size={31}
@@ -69,7 +69,7 @@ export default function Home() {
           <Spacer y={1} />
 
           <div className={styles.infoBox} style={{backgroundColor: "#F1EAFD"}}>
-            <img src="/glyphs/edit-page-svgrepo-com.svg" width={50} style={{marginTop: 20, marginBottom: 10}} alt="icon1"/>
+            <Image src="/glyphs/edit-page-svgrepo-com.svg" width={40} height={40} style={{marginTop: 20, marginBottom: 10}} alt="icon1"/>
 
             <Text h3 size={21} weight="bold">Prompt</Text>
             <Text size={18}>Enter the URL, estimate monthly pageviews and first/returning visit ratio of the web page you want to analyze and click the ‘Calculate’ button.</Text>
@@ -77,21 +77,21 @@ export default function Home() {
 
 
           <div className={styles.infoBox} style={{backgroundColor: "#EAF9FE"}}>
-            <img src="/glyphs/calculator-svgrepo-com.svg" width={50} style={{marginTop: 0, marginBottom: 10}} alt="icon1"/>
+            <Image src="/glyphs/calculator-svgrepo-com.svg" width={40} height={40} style={{marginTop: 0, marginBottom: 10}} alt="icon1"/>
             <Text h3 size={21} weight="bold">Calculate</Text>
             <Text size={18}>The calculator fetches the data from the entered URL, applies various audits, calculates the page load size and calculates the energy consumption depending on the server location of the web page served.</Text>
           </div>
 
 
           <div className={styles.infoBox} style={{backgroundColor: "#F9FFCE"}}>
-            <img src="/glyphs/text-page-svgrepo-com.svg" width={50} style={{marginTop: 0, marginBottom: 10}} alt="icon1"/>
+            <Image src="/glyphs/text-page-svgrepo-com.svg" width={40} height={40} style={{marginTop: 0, marginBottom: 10}} alt="icon1"/>
             <Text h3 size={21} weight="bold">Report</Text>
             <Text size={18}>The calculator tool then generates a report that includes the carbon footprint in terms of kg CO2, the amount of trees needed to offset the carbon footprint, and a list of recommendations to optimize the web page using Google Lighthouse metrics.</Text>
           </div>
 
 
           <div className={styles.infoBox} style={{backgroundColor: "#DBF2E2"}}>
-            <img src="/glyphs/admin-tools-svgrepo-com.svg" width={50} style={{marginTop: 0, marginBottom: 10}} alt="icon1"/>
+            <Image src="/glyphs/admin-tools-svgrepo-com.svg" width={40} height={40} style={{marginTop: 0, marginBottom: 10}} alt="icon1"/>
             <Text h3 size={21} weight="bold">Optimize</Text>
             <Text size={18}>You can then take action and apply the recommended changes and optimizations to reduce the carbon footprint of the web page using the given documentation links.</Text>
           </div>
@@ -99,7 +99,7 @@ export default function Home() {
 
       <Container sm gap={0}>
 
-        <img src="/illustrations/illustration1.svg" width={170} style={{display: "block", margin: "auto", marginTop: 50}} alt="il1"/>
+        <Image src="/illustrations/illustration1.svg" width={170} height={170} style={{display: "block", margin: "auto", marginTop: 50}} alt="il1"/>
         <Text
           h2
           size={31}
@@ -114,7 +114,7 @@ export default function Home() {
 
 
 
-        <img src="/illustrations/illustration2.svg" width={170} style={{display: "block", margin: "auto", marginTop: 100}} alt="il1"/>
+        <Image src="/illustrations/illustration2.svg" width={170} height={170} style={{display: "block", margin: "auto", marginTop: 100}} alt="il1"/>
         <Text
           h2
           size={31}

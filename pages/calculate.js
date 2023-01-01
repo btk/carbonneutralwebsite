@@ -169,7 +169,7 @@ ${text} for webpage ${url}.
 
   let getBannerURL = (style) => {
     let domain = url.split("/")[0];
-    return `http://carbonneutralwebsite.org/api/banner/${domain}/${displayValue(footPrint.impactInCarbon.firstVisit, "g").replace(" ", "")}/${style ? style : "light"}.svg`;
+    return `https://carbonneutralwebsite.org/api/banner/${domain}/${displayValue(footPrint.impactInCarbon.firstVisit, "g").replace(" ", "")}/${style ? style : "light"}.svg`;
   }
 
   let getBannerCode = (style, size) => {
