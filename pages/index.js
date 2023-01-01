@@ -107,7 +107,7 @@ export default function Home() {
           style={{textAlign: "center", marginTop: 20}}>Open Source</Text>
         <Text size={18} style={{textAlign: "center", maxWidth: 700, margin: "auto", paddingLeft: 10, paddingRight: 10}}>This complete project is open source and licensed under <a href="https://github.com/btk/carbonneutralwebsite/blob/main/LICENSE.md" target="_blank" rel="noreferrer">MIT License</a>. Feel free to make contributions, send pull requests or fork the current project.</Text>
 
-        <a href="https://github.com/btk/carbonneutralwebsite/" className={styles.github} target="_blank" rel="noreferrer"><img src="/glyphs/github-svgrepo-com.svg" width={20}/> <span>See on GitHub</span></a>
+        <a href="https://github.com/btk/carbonneutralwebsite/" className={styles.github} target="_blank" rel="noreferrer"><Image src="/glyphs/github-svgrepo-com.svg" width={20} height={20} alt="github"/> <span>See on GitHub</span></a>
 
         <Spacer y={1} />
 
