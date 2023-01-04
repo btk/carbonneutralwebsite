@@ -64,7 +64,7 @@ export default function Home() {
             size={31}
             weight="bold"
             style={{textAlign: "center", marginTop: 20}}>How It Works?</Text>
-          <Text size={18} style={{textAlign: "center", maxWidth: 700, margin: "auto", paddingLeft: 10, paddingRight: 10}}>This calculator allows you to continiously analyze your web page in 4 steps.</Text>
+          <Text size={18} style={{textAlign: "center", maxWidth: 700, margin: "auto", paddingLeft: 10, paddingRight: 10}}>This calculator allows you to continuously analyze your web page in 4 steps.</Text>
 
           <Spacer y={1} />
 
