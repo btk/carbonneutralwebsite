@@ -253,7 +253,7 @@ ${text} for webpage ${url}.
                 {hostData != null &&
                   <div>
                     <h4>Server Location</h4>
-                    <p style={{fontSize: 20}}>{hostData.city} {hostData.country}, {hostData.countryCode} {hostData.countryCode != "US" && <b style={{textAlign: "right", width: "100%"}}>(x{displayValue(intensityFactorMultip, "")} more emission than US)</b>}</p>
+                    <p style={{fontSize: 20}}>{hostData.city} {hostData.country}, {hostData.countryCode} {hostData.countryCode != "US" && <b style={{textAlign: "right", width: "100%"}}>(x{intensityFactorMultip.toFixed(2)} emission of US)</b>}</p>
                     <span>ISP: {hostData.isp}</span>
                   </div>
                 }
