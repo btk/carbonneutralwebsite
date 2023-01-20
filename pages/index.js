@@ -46,7 +46,7 @@ export default function Home() {
               <Link href="/calculate">
                 <Button size="lg" color="gradient"  css={{ $$primaryColor: "#330025" }} auto>Start Calculating</Button>
               </Link>
-              <Link href="/paper.pdf" target="_blank">
+              <Link href="https://www.researchgate.net/publication/367284593_A_CARBON_FOOTPRINT_CALCULATOR_TOOL_FOR_WEB_PAGES" target="_blank">
                 <p style={{textAlign: "center", width: 170, opacity: 0.5, marginTop: 5}}>See the paper</p>
               </Link>
             </div>

@@ -13,7 +13,7 @@ function Logo({size}){
         </Text>
 
           <Text style={{marginBottom: 10, fontSize: 18}}>
-            For more details, <Link href="/paper.pdf" target="_blank" style={{fontWeight: "bold"}}>see the academic paper.</Link>
+            For more details, <Link href="https://www.researchgate.net/publication/367284593_A_CARBON_FOOTPRINT_CALCULATOR_TOOL_FOR_WEB_PAGES" target="_blank" style={{fontWeight: "bold"}}>see the academic paper.</Link>
           </Text>
       </Collapse>
       <Collapse title="Calculation Process">
@@ -45,7 +45,7 @@ function Logo({size}){
         In conclusion, 0.371 * (98.1 / 1000000) = <b>0.002183706 g CO2 emitted per page load and browse</b>.
         </Text>
         <Text style={{marginBottom: 10, fontSize: 18}}>
-          For more details, <Link href="/paper.pdf" target="_blank" style={{fontWeight: "bold"}}>see the academic paper.</Link>
+          For more details, <Link href="https://www.researchgate.net/publication/367284593_A_CARBON_FOOTPRINT_CALCULATOR_TOOL_FOR_WEB_PAGES" target="_blank" style={{fontWeight: "bold"}}>see the academic paper.</Link>
         </Text>
       </Collapse>
       <Collapse title="Recommendation Process">
@@ -67,7 +67,7 @@ function Logo({size}){
         </Text>
 
           <Text style={{marginBottom: 10, fontSize: 18}}>
-            For more details, <Link href="/paper.pdf" target="_blank" style={{fontWeight: "bold"}}>see the academic paper.</Link>
+            For more details, <Link href="https://www.researchgate.net/publication/367284593_A_CARBON_FOOTPRINT_CALCULATOR_TOOL_FOR_WEB_PAGES" target="_blank" style={{fontWeight: "bold"}}>see the academic paper.</Link>
           </Text>
       </Collapse>
     </Collapse.Group>
