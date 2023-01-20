@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from "./style.module.css"
 import { Button, Text, Container, Card, Row, Spacer, Collapse } from '@nextui-org/react';
 
@@ -10,6 +11,10 @@ function Logo({size}){
         <Text style={{fontSize: 18}}>
           The user inputs their domain name into the calculator and the web application will generate a report on the carbon emission of the website depending on the data transfer size and website efficiency. The report will include a set of recommendations on how to reduce the carbon footprint of the website.This calculator will also tell you the amount of trees you should plant to offset your website&apos;s carbon footprint.
         </Text>
+
+          <Text style={{marginBottom: 10, fontSize: 18}}>
+            For more details, <Link href="/paper.pdf" target="_blank" style={{fontWeight: "bold"}}>see the academic paper.</Link>
+          </Text>
       </Collapse>
       <Collapse title="Calculation Process">
         <Text style={{marginBottom: 10, fontSize: 18}}>
@@ -39,6 +44,9 @@ function Logo({size}){
         </Text><Text style={{marginBottom: 10, fontSize: 18}}>
         In conclusion, 0.371 * (98.1 / 1000000) = <b>0.002183706 g CO2 emitted per page load and browse</b>.
         </Text>
+        <Text style={{marginBottom: 10, fontSize: 18}}>
+          For more details, <Link href="/paper.pdf" target="_blank" style={{fontWeight: "bold"}}>see the academic paper.</Link>
+        </Text>
       </Collapse>
       <Collapse title="Recommendation Process">
         <Text>
@@ -57,6 +65,10 @@ function Logo({size}){
 </Text><Text style={{marginBottom: 10, fontSize: 18}}>•	Optimize the DOM size of the web page by optimizing the size of HTML, CSS, and JavaScript code.
 </Text><Text style={{marginBottom: 10, fontSize: 18}}>•	Avoid using document.write on the web page.
         </Text>
+
+          <Text style={{marginBottom: 10, fontSize: 18}}>
+            For more details, <Link href="/paper.pdf" target="_blank" style={{fontWeight: "bold"}}>see the academic paper.</Link>
+          </Text>
       </Collapse>
     </Collapse.Group>
   );

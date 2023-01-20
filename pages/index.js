@@ -46,7 +46,9 @@ export default function Home() {
               <Link href="/calculate">
                 <Button size="lg" color="gradient"  css={{ $$primaryColor: "#330025" }} auto>Start Calculating</Button>
               </Link>
-
+              <Link href="/paper.pdf" target="_blank">
+                <p style={{textAlign: "center", width: 170, opacity: 0.5, marginTop: 5}}>See the paper</p>
+              </Link>
             </div>
             <Image src="/illustrations/illustration3.svg" width={320} height={320} style={{marginTop: 20, marginBottom: 20}} alt="il3"/>
 
